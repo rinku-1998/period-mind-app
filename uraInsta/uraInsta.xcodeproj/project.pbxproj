@@ -1,0 +1,606 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		48C350F1239F3F6200091EC3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 48C350F0239F3F6200091EC3 /* AppDelegate.m */; };
+		48C350F4239F3F6200091EC3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48C350F3239F3F6200091EC3 /* ViewController.m */; };
+		48C350F7239F3F6200091EC3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48C350F5239F3F6200091EC3 /* Main.storyboard */; };
+		48C350F9239F3F6300091EC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48C350F8239F3F6300091EC3 /* Assets.xcassets */; };
+		48C350FC239F3F6300091EC3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48C350FA239F3F6300091EC3 /* LaunchScreen.storyboard */; };
+		48C350FF239F3F6300091EC3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 48C350FE239F3F6300091EC3 /* main.m */; };
+		48C35109239F3F6300091EC3 /* uraInstaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 48C35108239F3F6300091EC3 /* uraInstaTests.m */; };
+		48C35114239F3F6300091EC3 /* uraInstaUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 48C35113239F3F6300091EC3 /* uraInstaUITests.m */; };
+		48C35124239F49B200091EC3 /* icon_comment.png in Resources */ = {isa = PBXBuildFile; fileRef = 48C35121239F49B100091EC3 /* icon_comment.png */; };
+		48C35125239F49B200091EC3 /* icon_like.png in Resources */ = {isa = PBXBuildFile; fileRef = 48C35122239F49B200091EC3 /* icon_like.png */; };
+		48C35126239F49B200091EC3 /* icon_share.png in Resources */ = {isa = PBXBuildFile; fileRef = 48C35123239F49B200091EC3 /* icon_share.png */; };
+		58E6EB0823A8776000D64345 /* tableHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58E6EB0723A8776000D64345 /* tableHeader.xib */; };
+		58FB64DE23AA104B0067809B /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58FB64DD23AA104B0067809B /* LoginViewController.m */; };
+		58FB64E123AA2DC60067809B /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58FB64E023AA2DC60067809B /* RegisterViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		48C35105239F3F6300091EC3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 48C350E4239F3F6200091EC3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 48C350EB239F3F6200091EC3;
+			remoteInfo = uraInsta;
+		};
+		48C35110239F3F6300091EC3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 48C350E4239F3F6200091EC3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 48C350EB239F3F6200091EC3;
+			remoteInfo = uraInsta;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		48C350EC239F3F6200091EC3 /* uraInsta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = uraInsta.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		48C350EF239F3F6200091EC3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		48C350F0239F3F6200091EC3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		48C350F2239F3F6200091EC3 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		48C350F3239F3F6200091EC3 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		48C350F6239F3F6200091EC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		48C350F8239F3F6300091EC3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		48C350FB239F3F6300091EC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		48C350FD239F3F6300091EC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		48C350FE239F3F6300091EC3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		48C35104239F3F6300091EC3 /* uraInstaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = uraInstaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		48C35108239F3F6300091EC3 /* uraInstaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = uraInstaTests.m; sourceTree = "<group>"; };
+		48C3510A239F3F6300091EC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		48C3510F239F3F6300091EC3 /* uraInstaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = uraInstaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		48C35113239F3F6300091EC3 /* uraInstaUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = uraInstaUITests.m; sourceTree = "<group>"; };
+		48C35115239F3F6300091EC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		48C35121239F49B100091EC3 /* icon_comment.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_comment.png; sourceTree = "<group>"; };
+		48C35122239F49B200091EC3 /* icon_like.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_like.png; sourceTree = "<group>"; };
+		48C35123239F49B200091EC3 /* icon_share.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_share.png; sourceTree = "<group>"; };
+		58E6EB0723A8776000D64345 /* tableHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = tableHeader.xib; sourceTree = "<group>"; };
+		58FB64DC23AA104B0067809B /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		58FB64DD23AA104B0067809B /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		58FB64DF23AA2DC60067809B /* RegisterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
+		58FB64E023AA2DC60067809B /* RegisterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		48C350E9239F3F6200091EC3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		48C35101239F3F6300091EC3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		48C3510C239F3F6300091EC3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		48C350E3239F3F6200091EC3 = {
+			isa = PBXGroup;
+			children = (
+				48C350EE239F3F6200091EC3 /* uraInsta */,
+				48C35107239F3F6300091EC3 /* uraInstaTests */,
+				48C35112239F3F6300091EC3 /* uraInstaUITests */,
+				48C350ED239F3F6200091EC3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		48C350ED239F3F6200091EC3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				48C350EC239F3F6200091EC3 /* uraInsta.app */,
+				48C35104239F3F6300091EC3 /* uraInstaTests.xctest */,
+				48C3510F239F3F6300091EC3 /* uraInstaUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		48C350EE239F3F6200091EC3 /* uraInsta */ = {
+			isa = PBXGroup;
+			children = (
+				48C350EF239F3F6200091EC3 /* AppDelegate.h */,
+				48C350F0239F3F6200091EC3 /* AppDelegate.m */,
+				48C350F2239F3F6200091EC3 /* ViewController.h */,
+				48C350F3239F3F6200091EC3 /* ViewController.m */,
+				48C350F5239F3F6200091EC3 /* Main.storyboard */,
+				48C35121239F49B100091EC3 /* icon_comment.png */,
+				48C35122239F49B200091EC3 /* icon_like.png */,
+				48C35123239F49B200091EC3 /* icon_share.png */,
+				48C350F8239F3F6300091EC3 /* Assets.xcassets */,
+				48C350FA239F3F6300091EC3 /* LaunchScreen.storyboard */,
+				48C350FD239F3F6300091EC3 /* Info.plist */,
+				48C350FE239F3F6300091EC3 /* main.m */,
+				58E6EB0723A8776000D64345 /* tableHeader.xib */,
+				58FB64DC23AA104B0067809B /* LoginViewController.h */,
+				58FB64DD23AA104B0067809B /* LoginViewController.m */,
+				58FB64DF23AA2DC60067809B /* RegisterViewController.h */,
+				58FB64E023AA2DC60067809B /* RegisterViewController.m */,
+			);
+			path = uraInsta;
+			sourceTree = "<group>";
+		};
+		48C35107239F3F6300091EC3 /* uraInstaTests */ = {
+			isa = PBXGroup;
+			children = (
+				48C35108239F3F6300091EC3 /* uraInstaTests.m */,
+				48C3510A239F3F6300091EC3 /* Info.plist */,
+			);
+			path = uraInstaTests;
+			sourceTree = "<group>";
+		};
+		48C35112239F3F6300091EC3 /* uraInstaUITests */ = {
+			isa = PBXGroup;
+			children = (
+				48C35113239F3F6300091EC3 /* uraInstaUITests.m */,
+				48C35115239F3F6300091EC3 /* Info.plist */,
+			);
+			path = uraInstaUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		48C350EB239F3F6200091EC3 /* uraInsta */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 48C35118239F3F6300091EC3 /* Build configuration list for PBXNativeTarget "uraInsta" */;
+			buildPhases = (
+				48C350E8239F3F6200091EC3 /* Sources */,
+				48C350E9239F3F6200091EC3 /* Frameworks */,
+				48C350EA239F3F6200091EC3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = uraInsta;
+			productName = uraInsta;
+			productReference = 48C350EC239F3F6200091EC3 /* uraInsta.app */;
+			productType = "com.apple.product-type.application";
+		};
+		48C35103239F3F6300091EC3 /* uraInstaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 48C3511B239F3F6300091EC3 /* Build configuration list for PBXNativeTarget "uraInstaTests" */;
+			buildPhases = (
+				48C35100239F3F6300091EC3 /* Sources */,
+				48C35101239F3F6300091EC3 /* Frameworks */,
+				48C35102239F3F6300091EC3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				48C35106239F3F6300091EC3 /* PBXTargetDependency */,
+			);
+			name = uraInstaTests;
+			productName = uraInstaTests;
+			productReference = 48C35104239F3F6300091EC3 /* uraInstaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		48C3510E239F3F6300091EC3 /* uraInstaUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 48C3511E239F3F6300091EC3 /* Build configuration list for PBXNativeTarget "uraInstaUITests" */;
+			buildPhases = (
+				48C3510B239F3F6300091EC3 /* Sources */,
+				48C3510C239F3F6300091EC3 /* Frameworks */,
+				48C3510D239F3F6300091EC3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				48C35111239F3F6300091EC3 /* PBXTargetDependency */,
+			);
+			name = uraInstaUITests;
+			productName = uraInstaUITests;
+			productReference = 48C3510F239F3F6300091EC3 /* uraInstaUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		48C350E4239F3F6200091EC3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1030;
+				ORGANIZATIONNAME = mac12;
+				TargetAttributes = {
+					48C350EB239F3F6200091EC3 = {
+						CreatedOnToolsVersion = 10.3;
+					};
+					48C35103239F3F6300091EC3 = {
+						CreatedOnToolsVersion = 10.3;
+						TestTargetID = 48C350EB239F3F6200091EC3;
+					};
+					48C3510E239F3F6300091EC3 = {
+						CreatedOnToolsVersion = 10.3;
+						TestTargetID = 48C350EB239F3F6200091EC3;
+					};
+				};
+			};
+			buildConfigurationList = 48C350E7239F3F6200091EC3 /* Build configuration list for PBXProject "uraInsta" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 48C350E3239F3F6200091EC3;
+			productRefGroup = 48C350ED239F3F6200091EC3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				48C350EB239F3F6200091EC3 /* uraInsta */,
+				48C35103239F3F6300091EC3 /* uraInstaTests */,
+				48C3510E239F3F6300091EC3 /* uraInstaUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		48C350EA239F3F6200091EC3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				48C35125239F49B200091EC3 /* icon_like.png in Resources */,
+				48C350FC239F3F6300091EC3 /* LaunchScreen.storyboard in Resources */,
+				48C35126239F49B200091EC3 /* icon_share.png in Resources */,
+				58E6EB0823A8776000D64345 /* tableHeader.xib in Resources */,
+				48C350F9239F3F6300091EC3 /* Assets.xcassets in Resources */,
+				48C35124239F49B200091EC3 /* icon_comment.png in Resources */,
+				48C350F7239F3F6200091EC3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		48C35102239F3F6300091EC3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		48C3510D239F3F6300091EC3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		48C350E8239F3F6200091EC3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				58FB64E123AA2DC60067809B /* RegisterViewController.m in Sources */,
+				58FB64DE23AA104B0067809B /* LoginViewController.m in Sources */,
+				48C350F4239F3F6200091EC3 /* ViewController.m in Sources */,
+				48C350FF239F3F6300091EC3 /* main.m in Sources */,
+				48C350F1239F3F6200091EC3 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		48C35100239F3F6300091EC3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				48C35109239F3F6300091EC3 /* uraInstaTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		48C3510B239F3F6300091EC3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				48C35114239F3F6300091EC3 /* uraInstaUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		48C35106239F3F6300091EC3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 48C350EB239F3F6200091EC3 /* uraInsta */;
+			targetProxy = 48C35105239F3F6300091EC3 /* PBXContainerItemProxy */;
+		};
+		48C35111239F3F6300091EC3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 48C350EB239F3F6200091EC3 /* uraInsta */;
+			targetProxy = 48C35110239F3F6300091EC3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		48C350F5239F3F6200091EC3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				48C350F6239F3F6200091EC3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		48C350FA239F3F6300091EC3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				48C350FB239F3F6300091EC3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		48C35116239F3F6300091EC3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		48C35117239F3F6300091EC3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		48C35119239F3F6300091EC3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = uraInsta/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = tw.edu.Yuntech.CSIE.uraInsta;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		48C3511A239F3F6300091EC3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = uraInsta/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = tw.edu.Yuntech.CSIE.uraInsta;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		48C3511C239F3F6300091EC3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = uraInstaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = tw.edu.Yuntech.CSIE.uraInstaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/uraInsta.app/uraInsta";
+			};
+			name = Debug;
+		};
+		48C3511D239F3F6300091EC3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = uraInstaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = tw.edu.Yuntech.CSIE.uraInstaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/uraInsta.app/uraInsta";
+			};
+			name = Release;
+		};
+		48C3511F239F3F6300091EC3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = uraInstaUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = tw.edu.Yuntech.CSIE.uraInstaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = uraInsta;
+			};
+			name = Debug;
+		};
+		48C35120239F3F6300091EC3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = uraInstaUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = tw.edu.Yuntech.CSIE.uraInstaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = uraInsta;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		48C350E7239F3F6200091EC3 /* Build configuration list for PBXProject "uraInsta" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				48C35116239F3F6300091EC3 /* Debug */,
+				48C35117239F3F6300091EC3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		48C35118239F3F6300091EC3 /* Build configuration list for PBXNativeTarget "uraInsta" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				48C35119239F3F6300091EC3 /* Debug */,
+				48C3511A239F3F6300091EC3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		48C3511B239F3F6300091EC3 /* Build configuration list for PBXNativeTarget "uraInstaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				48C3511C239F3F6300091EC3 /* Debug */,
+				48C3511D239F3F6300091EC3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		48C3511E239F3F6300091EC3 /* Build configuration list for PBXNativeTarget "uraInstaUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				48C3511F239F3F6300091EC3 /* Debug */,
+				48C35120239F3F6300091EC3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 48C350E4239F3F6200091EC3 /* Project object */;
+}
