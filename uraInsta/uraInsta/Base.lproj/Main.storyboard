@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Clv-kg-PUF">
-    <device id="retina5_5" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Clv-kg-PUF">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,7 +14,7 @@
                 <navigationController id="hge-Z6-PmK" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="pTu-e9-U05"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hdw-d0-v8h">
-                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -44,7 +42,7 @@
                                         <rect key="frame" x="0.0" y="28" width="414" height="357"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dzi-LW-Umm" id="5gD-gb-Kbe">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="356.66666666666669"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="357"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q8R-XF-hmR">
@@ -92,45 +90,12 @@
             <point key="canvasLocation" x="3358" y="-44"/>
         </scene>
         <!--Item-->
-        <scene sceneID="a0g-47-wjw">
-            <objects>
-                <navigationController id="nXT-Qn-7Cr" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="gA5-x5-vnA"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="V2H-7I-4IK">
-                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="pD6-ce-Qxb" kind="relationship" relationship="rootViewController" id="eAv-le-nbP"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="S1l-zf-V0a" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2574" y="1454"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="Nev-i3-eya">
-            <objects>
-                <viewController id="pD6-ce-Qxb" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="jJn-4d-yiM">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="z9W-Cn-Xqp"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="CNf-os-5UV"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zbM-fw-9cJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3396" y="1454"/>
-        </scene>
-        <!--Item-->
         <scene sceneID="VTu-gU-D87">
             <objects>
                 <navigationController id="xCs-gf-dbV" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="t4N-F3-UiZ"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="PDZ-cB-3uO">
-                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -144,7 +109,6 @@
         <!--View Controller-->
         <scene sceneID="TEu-eY-67T">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="pEJ-cu-mvr" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="krL-0f-yhI" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fOX-aG-Phl">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
@@ -154,6 +118,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="udO-Gu-kjs"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pEJ-cu-mvr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3357.971014492754" y="676.63043478260875"/>
         </scene>
@@ -168,14 +133,12 @@
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mKm-yi-mpz">
                                 <rect key="frame" x="90" y="242" width="234" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h6Q-7g-ELs">
                                 <rect key="frame" x="90" y="310" width="234" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -215,7 +178,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Clv-kg-PUF" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="df6-hM-JwR">
-                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -233,13 +196,13 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="OmB-Wh-wiu" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="OY7-r0-6DD">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="hge-Z6-PmK" kind="relationship" relationship="viewControllers" id="WIT-H3-JNv"/>
                         <segue destination="xCs-gf-dbV" kind="relationship" relationship="viewControllers" id="Czl-3b-7cj"/>
-                        <segue destination="nXT-Qn-7Cr" kind="relationship" relationship="viewControllers" id="uLF-Wv-8ds"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1jL-2r-8Ke" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -257,14 +220,12 @@
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MpK-9P-Cn9">
                                 <rect key="frame" x="90" y="242" width="234" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="V0y-9T-txa">
                                 <rect key="frame" x="90" y="310" width="234" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
