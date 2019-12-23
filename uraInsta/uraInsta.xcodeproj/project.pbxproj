@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		47951FED23B0EE41001A1FE5 /* FindPasswordByEmailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47951FEC23B0EE41001A1FE5 /* FindPasswordByEmailViewController.m */; };
+		479FDDD223B13774003548E4 /* SetNewPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 479FDDD123B13774003548E4 /* SetNewPasswordViewController.m */; };
+		479FDDD523B13A63003548E4 /* AccountDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 479FDDD423B13A63003548E4 /* AccountDetailViewController.m */; };
+		479FDDD823B13AAB003548E4 /* AccountDetailEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 479FDDD723B13AAB003548E4 /* AccountDetailEditViewController.m */; };
 		48C350F1239F3F6200091EC3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 48C350F0239F3F6200091EC3 /* AppDelegate.m */; };
 		48C350F4239F3F6200091EC3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48C350F3239F3F6200091EC3 /* ViewController.m */; };
 		48C350F7239F3F6200091EC3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48C350F5239F3F6200091EC3 /* Main.storyboard */; };
@@ -44,6 +47,12 @@
 /* Begin PBXFileReference section */
 		47951FEB23B0EE41001A1FE5 /* FindPasswordByEmailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FindPasswordByEmailViewController.h; sourceTree = "<group>"; };
 		47951FEC23B0EE41001A1FE5 /* FindPasswordByEmailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FindPasswordByEmailViewController.m; sourceTree = "<group>"; };
+		479FDDD023B13774003548E4 /* SetNewPasswordViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SetNewPasswordViewController.h; sourceTree = "<group>"; };
+		479FDDD123B13774003548E4 /* SetNewPasswordViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SetNewPasswordViewController.m; sourceTree = "<group>"; };
+		479FDDD323B13A63003548E4 /* AccountDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AccountDetailViewController.h; sourceTree = "<group>"; };
+		479FDDD423B13A63003548E4 /* AccountDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AccountDetailViewController.m; sourceTree = "<group>"; };
+		479FDDD623B13AAB003548E4 /* AccountDetailEditViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AccountDetailEditViewController.h; sourceTree = "<group>"; };
+		479FDDD723B13AAB003548E4 /* AccountDetailEditViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AccountDetailEditViewController.m; sourceTree = "<group>"; };
 		48C350EC239F3F6200091EC3 /* uraInsta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = uraInsta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48C350EF239F3F6200091EC3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		48C350F0239F3F6200091EC3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -137,6 +146,12 @@
 				58FB64E023AA2DC60067809B /* RegisterViewController.m */,
 				47951FEB23B0EE41001A1FE5 /* FindPasswordByEmailViewController.h */,
 				47951FEC23B0EE41001A1FE5 /* FindPasswordByEmailViewController.m */,
+				479FDDD023B13774003548E4 /* SetNewPasswordViewController.h */,
+				479FDDD123B13774003548E4 /* SetNewPasswordViewController.m */,
+				479FDDD323B13A63003548E4 /* AccountDetailViewController.h */,
+				479FDDD423B13A63003548E4 /* AccountDetailViewController.m */,
+				479FDDD623B13AAB003548E4 /* AccountDetailEditViewController.h */,
+				479FDDD723B13AAB003548E4 /* AccountDetailEditViewController.m */,
 			);
 			path = uraInsta;
 			sourceTree = "<group>";
@@ -294,11 +309,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				47951FED23B0EE41001A1FE5 /* FindPasswordByEmailViewController.m in Sources */,
+				479FDDD223B13774003548E4 /* SetNewPasswordViewController.m in Sources */,
 				58FB64E123AA2DC60067809B /* RegisterViewController.m in Sources */,
 				58FB64DE23AA104B0067809B /* LoginViewController.m in Sources */,
 				48C350F4239F3F6200091EC3 /* ViewController.m in Sources */,
 				48C350FF239F3F6300091EC3 /* main.m in Sources */,
+				479FDDD823B13AAB003548E4 /* AccountDetailEditViewController.m in Sources */,
 				48C350F1239F3F6200091EC3 /* AppDelegate.m in Sources */,
+				479FDDD523B13A63003548E4 /* AccountDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

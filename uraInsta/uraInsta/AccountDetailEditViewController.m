@@ -1,0 +1,35 @@
+//
+//  AccountDetailEditViewController.m
+//  uraInsta
+//
+//  Created by phantomSTo on 2019/12/24.
+//  Copyright © 2019 mac12. All rights reserved.
+//
+
+#import "AccountDetailEditViewController.h"
+
+@interface AccountDetailEditViewController ()
+
+@end
+
+@implementation AccountDetailEditViewController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    // Do any additional setup after loading the view.
+    _labelAccountEmail.text=self.accountEmail;
+    _textAcountName.text=self.accountName;
+    _textAccountDetail.text=self.accountDetail;
+}
+
+/*
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+*/
+
+@end
