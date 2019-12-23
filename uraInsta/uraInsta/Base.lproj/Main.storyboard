@@ -152,6 +152,55 @@
             </objects>
             <point key="canvasLocation" x="3357.971014492754" y="676.63043478260875"/>
         </scene>
+        <!--Find Password By Email View Controller-->
+        <scene sceneID="5Xi-1i-jGR">
+            <objects>
+                <viewController id="zM2-HA-orj" customClass="FindPasswordByEmailViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MLE-Tb-suM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kjM-NA-8LX">
+                                <rect key="frame" x="20" y="116" width="278" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eAE-j7-mKi">
+                                <rect key="frame" x="310" y="118" width="84" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="取得驗證碼"/>
+                                <connections>
+                                    <action selector="sendVerifyCode:" destination="zM2-HA-orj" eventType="touchUpInside" id="NZ6-WM-lxS"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="驗證碼" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CQ2-ke-kj6">
+                                <rect key="frame" x="20" y="212" width="374" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pcr-3p-ZtK">
+                                <rect key="frame" x="192" y="276" width="31" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="確認"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="8WS-Wq-rZb"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="eOy-Jj-Eit"/>
+                    <connections>
+                        <outlet property="btnCheckVerifyCode" destination="Pcr-3p-ZtK" id="1Jm-Al-L3b"/>
+                        <outlet property="btnSendVerifyCode" destination="eAE-j7-mKi" id="VGb-2F-DZ6"/>
+                        <outlet property="textEmail" destination="kjM-NA-8LX" id="XX8-2v-RFI"/>
+                        <outlet property="textVerifyCode" destination="CQ2-ke-kj6" id="pMn-0v-wyL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Ga-PO-LkP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="905.79710144927549" y="-529.07608695652175"/>
+        </scene>
         <!--Login View Controller-->
         <scene sceneID="MgW-xB-4NG">
             <objects>
@@ -172,20 +221,28 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mxH-2v-F30">
-                                <rect key="frame" x="286" y="385" width="31" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="登入"/>
-                                <connections>
-                                    <segue destination="OmB-Wh-wiu" kind="showDetail" identifier="gotoindex" id="8Wb-NC-Vsm"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ut8-rf-HCd">
                                 <rect key="frame" x="90" y="385" width="31" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="註冊"/>
                                 <connections>
                                     <segue destination="qMY-CK-0UA" kind="show" id="Ncw-Wn-j5v"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iN1-9k-gv5">
+                                <rect key="frame" x="270" y="385" width="62" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="忘記密碼"/>
+                                <connections>
+                                    <segue destination="zM2-HA-orj" kind="show" id="TQG-cp-Lqn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mxH-2v-F30">
+                                <rect key="frame" x="192" y="436" width="31" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="登入"/>
+                                <connections>
+                                    <segue destination="OmB-Wh-wiu" kind="showDetail" identifier="gotoindex" id="8Wb-NC-Vsm"/>
                                 </connections>
                             </button>
                         </subviews>
