@@ -474,6 +474,7 @@
                     <connections>
                         <outlet property="textEmail" destination="mKm-yi-mpz" id="cEE-tk-H98"/>
                         <outlet property="textPassword" destination="h6Q-7g-ELs" id="mPN-R2-X0s"/>
+                        <segue destination="OmB-Wh-wiu" kind="showDetail" identifier="gotoindex" id="Liq-kU-3eo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HxX-kc-Ie7" userLabel="First Responder" sceneMemberID="firstResponder"/>
