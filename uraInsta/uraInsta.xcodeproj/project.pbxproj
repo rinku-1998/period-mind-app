@@ -22,6 +22,12 @@
 		48C35124239F49B200091EC3 /* icon_comment.png in Resources */ = {isa = PBXBuildFile; fileRef = 48C35121239F49B100091EC3 /* icon_comment.png */; };
 		48C35125239F49B200091EC3 /* icon_like.png in Resources */ = {isa = PBXBuildFile; fileRef = 48C35122239F49B200091EC3 /* icon_like.png */; };
 		48C35126239F49B200091EC3 /* icon_share.png in Resources */ = {isa = PBXBuildFile; fileRef = 48C35123239F49B200091EC3 /* icon_share.png */; };
+		583341C723B35D0900F27DD8 /* NewPostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 583341C623B35D0900F27DD8 /* NewPostViewController.m */; };
+		583341CB23B3602A00F27DD8 /* icon_location.png in Resources */ = {isa = PBXBuildFile; fileRef = 583341C823B3602900F27DD8 /* icon_location.png */; };
+		583341CC23B3602A00F27DD8 /* icon_picture.png in Resources */ = {isa = PBXBuildFile; fileRef = 583341C923B3602900F27DD8 /* icon_picture.png */; };
+		583341CD23B3602A00F27DD8 /* icon_send.png in Resources */ = {isa = PBXBuildFile; fileRef = 583341CA23B3602900F27DD8 /* icon_send.png */; };
+		583341D023B3653900F27DD8 /* icon_registerTime.png in Resources */ = {isa = PBXBuildFile; fileRef = 583341CE23B3653800F27DD8 /* icon_registerTime.png */; };
+		583341D123B3653900F27DD8 /* icon_email.png in Resources */ = {isa = PBXBuildFile; fileRef = 583341CF23B3653800F27DD8 /* icon_email.png */; };
 		58E6EB0823A8776000D64345 /* tableHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58E6EB0723A8776000D64345 /* tableHeader.xib */; };
 		58FB64DE23AA104B0067809B /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58FB64DD23AA104B0067809B /* LoginViewController.m */; };
 		58FB64E123AA2DC60067809B /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58FB64E023AA2DC60067809B /* RegisterViewController.m */; };
@@ -72,6 +78,13 @@
 		48C35121239F49B100091EC3 /* icon_comment.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_comment.png; sourceTree = "<group>"; };
 		48C35122239F49B200091EC3 /* icon_like.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_like.png; sourceTree = "<group>"; };
 		48C35123239F49B200091EC3 /* icon_share.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_share.png; sourceTree = "<group>"; };
+		583341C523B35D0900F27DD8 /* NewPostViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewPostViewController.h; sourceTree = "<group>"; };
+		583341C623B35D0900F27DD8 /* NewPostViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewPostViewController.m; sourceTree = "<group>"; };
+		583341C823B3602900F27DD8 /* icon_location.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_location.png; sourceTree = "<group>"; };
+		583341C923B3602900F27DD8 /* icon_picture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_picture.png; sourceTree = "<group>"; };
+		583341CA23B3602900F27DD8 /* icon_send.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_send.png; sourceTree = "<group>"; };
+		583341CE23B3653800F27DD8 /* icon_registerTime.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_registerTime.png; sourceTree = "<group>"; };
+		583341CF23B3653800F27DD8 /* icon_email.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_email.png; sourceTree = "<group>"; };
 		58E6EB0723A8776000D64345 /* tableHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = tableHeader.xib; sourceTree = "<group>"; };
 		58FB64DC23AA104B0067809B /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		58FB64DD23AA104B0067809B /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
@@ -127,11 +140,18 @@
 		48C350EE239F3F6200091EC3 /* uraInsta */ = {
 			isa = PBXGroup;
 			children = (
+				48C350F5239F3F6200091EC3 /* Main.storyboard */,
+				583341CF23B3653800F27DD8 /* icon_email.png */,
+				583341CE23B3653800F27DD8 /* icon_registerTime.png */,
+				583341C823B3602900F27DD8 /* icon_location.png */,
+				583341C923B3602900F27DD8 /* icon_picture.png */,
+				583341CA23B3602900F27DD8 /* icon_send.png */,
 				48C350EF239F3F6200091EC3 /* AppDelegate.h */,
 				48C350F0239F3F6200091EC3 /* AppDelegate.m */,
 				48C350F2239F3F6200091EC3 /* ViewController.h */,
 				48C350F3239F3F6200091EC3 /* ViewController.m */,
-				48C350F5239F3F6200091EC3 /* Main.storyboard */,
+				583341C523B35D0900F27DD8 /* NewPostViewController.h */,
+				583341C623B35D0900F27DD8 /* NewPostViewController.m */,
 				48C35121239F49B100091EC3 /* icon_comment.png */,
 				48C35122239F49B200091EC3 /* icon_like.png */,
 				48C35123239F49B200091EC3 /* icon_share.png */,
@@ -280,9 +300,14 @@
 				48C35125239F49B200091EC3 /* icon_like.png in Resources */,
 				48C350FC239F3F6300091EC3 /* LaunchScreen.storyboard in Resources */,
 				48C35126239F49B200091EC3 /* icon_share.png in Resources */,
+				583341D023B3653900F27DD8 /* icon_registerTime.png in Resources */,
 				58E6EB0823A8776000D64345 /* tableHeader.xib in Resources */,
 				48C350F9239F3F6300091EC3 /* Assets.xcassets in Resources */,
+				583341CB23B3602A00F27DD8 /* icon_location.png in Resources */,
+				583341CC23B3602A00F27DD8 /* icon_picture.png in Resources */,
 				48C35124239F49B200091EC3 /* icon_comment.png in Resources */,
+				583341D123B3653900F27DD8 /* icon_email.png in Resources */,
+				583341CD23B3602A00F27DD8 /* icon_send.png in Resources */,
 				48C350F7239F3F6200091EC3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -309,6 +334,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				47951FED23B0EE41001A1FE5 /* FindPasswordByEmailViewController.m in Sources */,
+				583341C723B35D0900F27DD8 /* NewPostViewController.m in Sources */,
 				479FDDD223B13774003548E4 /* SetNewPasswordViewController.m in Sources */,
 				58FB64E123AA2DC60067809B /* RegisterViewController.m in Sources */,
 				58FB64DE23AA104B0067809B /* LoginViewController.m in Sources */,
