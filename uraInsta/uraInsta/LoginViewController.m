@@ -82,7 +82,7 @@
 //}
 -(void)getCSRFTokenAndLogin{
     
-    NSString *url_string = @"http:127.0.0.1:5000/login";
+    NSString *url_string = @"http://127.0.0.1:5000/api/login";
     __block NSString *csrf_token = @""; //'__block' makes block code can access this variable
     NSURL *url = [NSURL URLWithString:url_string];
     
@@ -133,7 +133,7 @@
 -(void)login:(NSString *)csrf_token{
     NSString *email = self.textEmail.text;
     NSString *password = self.textPassword.text;
-    NSString *url_string = @"http:127.0.0.1:5000/login";
+    NSString *url_string = @"http://127.0.0.1:5000/api/login";
     NSURL *url = [NSURL URLWithString:url_string];
     
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
