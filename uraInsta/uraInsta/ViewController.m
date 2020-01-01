@@ -22,7 +22,7 @@
     [self.mytableview registerNib:cell_nib forCellReuseIdentifier:@"newPostCell"];
     
     testarr= [[NSMutableArray alloc]initWithObjects:nil];
-    for (int i=0; i<100; i++) {
+    for (int i=0; i<10; i++) {
         [testarr addObject:[NSString stringWithFormat:@"%d",i]];
         for (int j=0;j<=i;j++) {
             NSString *s = [testarr objectAtIndex:i];
@@ -102,6 +102,15 @@
     UITextView *tv = [cell viewWithTag:1];
     tv.text = [testarr objectAtIndex:indexPath.row];
     return cell;
+}
+- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
+{
+    UITableViewCell *view = [tableView dequeueReusableCellWithIdentifier:@"postContentLastCell"];
+    return view;
+}
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
+{
+    return 100.0f;
 }
 //- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 //{

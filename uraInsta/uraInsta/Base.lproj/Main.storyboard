@@ -35,7 +35,6 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="boI-Fz-gKi">
                                 <rect key="frame" x="0.0" y="44" width="414" height="643"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="postContentCell" rowHeight="421" id="dzi-LW-Umm">
                                         <rect key="frame" x="0.0" y="28" width="414" height="421"/>
@@ -85,13 +84,12 @@
                                                     <rect key="frame" x="72" y="316" width="20" height="20"/>
                                                     <state key="normal" title="Button" image="icon_share.png"/>
                                                 </button>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="QM3-49-rAi">
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleToFill" scrollEnabled="NO" text="最後一個" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="QM3-49-rAi">
                                                     <rect key="frame" x="16" y="344" width="378" height="57"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="Dlq-p1-l1b"/>
                                                     </constraints>
-                                                    <string key="text">我是大佬我是大佬我是大佬我是大佬我是大佬我是大佬我是大佬我是大佬我是大佬我是大佬我是大佬我是大佬我是大佬我是大佬我是大佬我是大佬我是大佬我是大佬我是大佬我是大佬我是大佬我是大佬我是大佬我是大佬我是大佬我是大佬我是大佬我是大佬我是大佬我是大佬我是大佬我是大佬我是大佬我是大佬我是大佬我是大佬123456我是大佬我是大佬我是大佬我是大佬我是大佬我是大佬我是大佬我是大佬我是大佬我是大佬我是大佬我是大佬我是大佬我是大佬我是大佬123456</string>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 </textView>
@@ -124,14 +122,33 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="postContentLastCell" id="E9H-iT-l9v">
+                                        <rect key="frame" x="0.0" y="449" width="414" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="E9H-iT-l9v" id="c1F-cP-BPt">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YVg-j2-gSW">
+                                                    <rect key="frame" x="186" y="11" width="42" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                 </prototypes>
+                                <sections/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="boI-Fz-gKi" secondAttribute="top" id="92x-rF-xtM"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="boI-Fz-gKi" secondAttribute="bottom" id="9uR-zd-UTD"/>
                             <constraint firstItem="boI-Fz-gKi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="hTJ-Bh-4zm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="boI-Fz-gKi" secondAttribute="bottom" id="nHP-zd-TqK"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="boI-Fz-gKi" secondAttribute="trailing" id="osI-dS-3cG"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -910,7 +927,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="AvR-mc-dn3">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="OmB-Wh-wiu" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="OmB-Wh-wiu" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="OY7-r0-6DD">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
