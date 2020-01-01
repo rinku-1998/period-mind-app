@@ -15,6 +15,7 @@
 @property (strong, nonatomic) IBOutlet UITableView *mytableview;
 @property (strong, nonatomic) IBOutlet UITextField *textEmail;
 @property (strong, nonatomic) IBOutlet UITextField *textPassword;
+@property (strong, nonatomic) IBOutlet UITextView *labelText;
 
 @end
 

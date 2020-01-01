@@ -24,6 +24,11 @@
     testarr= [[NSMutableArray alloc]initWithObjects:nil];
     for (int i=0; i<100; i++) {
         [testarr addObject:[NSString stringWithFormat:@"%d",i]];
+        for (int j=0;j<=i;j++) {
+            NSString *s = [testarr objectAtIndex:i];
+            s = [s stringByAppendingString:@"我是大佬"];
+            [testarr replaceObjectAtIndex:i withObject:s];
+        }
     }
     // Do any additional setup after loading the view.
 //    int rgbValue = 0xF44336;
@@ -72,28 +77,37 @@
     return [testarr count];
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    if (indexPath.row==0) {
-        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"newPostCell"];
-        cell.selectionStyle = UITableViewCellSelectionStyleNone;
-        return cell;
-    }
-    else
-    {
-        NSString *cellID=@"cell";
-        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
-        if (!cell) {
-            cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
-        }
-        NSString *str = [testarr objectAtIndex:indexPath.row];
-        cell.textLabel.text=str;
-        return cell;
-    }
+//    if (indexPath.row==0) {
+//        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"newPostCell"];
+//        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+//        return cell;
+//    }
+//    else
+//    {
+//        NSString *cellID=@"cell";
+//        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
+//        if (!cell) {
+//            cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
+//        }
+//        NSString *str = [testarr objectAtIndex:indexPath.row];
+//        cell.textLabel.text=str;
+//        return cell;
+//    }
+    NSString *cellID=@"postContentCell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
+//    if (!cell) {
+//        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
+//    }
+    NSString *str = [testarr objectAtIndex:indexPath.row];
+    UITextView *tv = [cell viewWithTag:1];
+    tv.text = [testarr objectAtIndex:indexPath.row];
+    return cell;
 }
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (indexPath.row==0) {
-        return 220.0f;
-    }
-    return tableView.rowHeight;
-}
+//- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+////    if (indexPath.row==0) {
+////        return 220.0f;
+////    }
+//    return 500.f;
+//}
 @end
