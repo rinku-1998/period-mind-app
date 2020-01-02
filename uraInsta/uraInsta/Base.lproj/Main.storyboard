@@ -992,7 +992,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="643"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bt8-5Z-rHb">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="384"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="424"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_email.png" translatesAutoresizingMaskIntoConstraints="NO" id="FVi-I7-sP3">
                                                 <rect key="frame" x="150" y="36" width="114" height="114"/>
@@ -1051,6 +1051,10 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Nf-dh-MVT">
+                                                <rect key="frame" x="191.66666666666666" y="384" width="31" height="30"/>
+                                                <state key="normal" title="儲存"/>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -1061,18 +1065,20 @@
                                             <constraint firstItem="8Tj-QD-jGt" firstAttribute="leading" secondItem="1j7-Zh-oao" secondAttribute="leading" id="8jX-fK-Ig6"/>
                                             <constraint firstItem="ElA-cg-3fu" firstAttribute="leading" secondItem="P2R-ph-BmG" secondAttribute="trailing" constant="40.333333333333343" id="Ami-Is-uUV"/>
                                             <constraint firstItem="P2R-ph-BmG" firstAttribute="top" secondItem="a5N-o0-On6" secondAttribute="bottom" constant="20" id="BhW-Mc-ecU"/>
+                                            <constraint firstAttribute="bottom" secondItem="2Nf-dh-MVT" secondAttribute="bottom" constant="10" id="CgT-FP-phx"/>
                                             <constraint firstItem="FVi-I7-sP3" firstAttribute="top" secondItem="bt8-5Z-rHb" secondAttribute="top" constant="36" id="DaX-Cd-Lcl"/>
                                             <constraint firstItem="1j7-Zh-oao" firstAttribute="top" secondItem="FVi-I7-sP3" secondAttribute="bottom" constant="30" id="Hoq-fe-dxU"/>
                                             <constraint firstItem="8Tj-QD-jGt" firstAttribute="trailing" secondItem="1j7-Zh-oao" secondAttribute="trailing" id="IF2-eR-YYM"/>
                                             <constraint firstItem="9p7-Oe-5Wk" firstAttribute="leading" secondItem="ElA-cg-3fu" secondAttribute="leading" id="Py1-m3-fbF"/>
                                             <constraint firstItem="ElA-cg-3fu" firstAttribute="leading" secondItem="8Tj-QD-jGt" secondAttribute="leading" id="Qcs-Ge-xmM"/>
                                             <constraint firstItem="FVi-I7-sP3" firstAttribute="centerX" secondItem="bt8-5Z-rHb" secondAttribute="centerX" id="Tn7-z1-mll"/>
+                                            <constraint firstItem="2Nf-dh-MVT" firstAttribute="top" secondItem="9p7-Oe-5Wk" secondAttribute="bottom" constant="10" id="Vii-fo-OVw"/>
                                             <constraint firstItem="mvB-NO-0fS" firstAttribute="leading" secondItem="P2R-ph-BmG" secondAttribute="leading" id="W9D-jL-CQB"/>
                                             <constraint firstItem="ElA-cg-3fu" firstAttribute="centerY" secondItem="P2R-ph-BmG" secondAttribute="centerY" id="Wx5-sO-csU"/>
                                             <constraint firstItem="8Tj-QD-jGt" firstAttribute="centerY" secondItem="a5N-o0-On6" secondAttribute="centerY" id="XTF-71-oQl"/>
-                                            <constraint firstAttribute="bottom" secondItem="9p7-Oe-5Wk" secondAttribute="bottom" constant="10" id="YAV-h1-USf"/>
                                             <constraint firstItem="9p7-Oe-5Wk" firstAttribute="trailing" secondItem="ElA-cg-3fu" secondAttribute="trailing" id="ZFN-fc-YaP"/>
                                             <constraint firstAttribute="trailing" secondItem="1j7-Zh-oao" secondAttribute="trailing" constant="20" id="dSH-gL-GaW"/>
+                                            <constraint firstItem="2Nf-dh-MVT" firstAttribute="centerX" secondItem="bt8-5Z-rHb" secondAttribute="centerX" id="dSa-rJ-naK"/>
                                             <constraint firstItem="9p7-Oe-5Wk" firstAttribute="top" secondItem="ElA-cg-3fu" secondAttribute="bottom" constant="5" id="eM1-5j-WfP"/>
                                             <constraint firstItem="a5N-o0-On6" firstAttribute="top" secondItem="vwo-Pv-XFY" secondAttribute="bottom" constant="20" id="eeZ-mr-Cm2"/>
                                             <constraint firstItem="a5N-o0-On6" firstAttribute="leading" secondItem="vwo-Pv-XFY" secondAttribute="leading" id="hgj-0Z-era"/>
@@ -1107,7 +1113,7 @@
                     <navigationItem key="navigationItem" id="vdj-2z-xNV">
                         <barButtonItem key="rightBarButtonItem" title="儲存" id="q75-zk-YTb">
                             <connections>
-                                <segue destination="Wj0-OF-b03" kind="unwind" unwindAction="backFromAccountDetailEditViewController:" id="Ffe-md-H4n"/>
+                                <segue destination="Wj0-OF-b03" kind="unwind" unwindAction="backFromAccountDetailEditViewController:" id="gtk-JY-Re2"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
