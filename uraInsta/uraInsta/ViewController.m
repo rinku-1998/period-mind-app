@@ -103,15 +103,15 @@
     tv.text = [testarr objectAtIndex:indexPath.row];
     return cell;
 }
-- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
-{
-    UITableViewCell *view = [tableView dequeueReusableCellWithIdentifier:@"postContentLastCell"];
-    return view;
-}
-- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
-{
-    return 100.0f;
-}
+//- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
+//{
+//    UITableViewCell *view = [tableView dequeueReusableCellWithIdentifier:@"postContentLastCell"];
+//    return view;
+//}
+//- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
+//{
+//    return 100.0f;
+//}
 //- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 //{
 ////    if (indexPath.row==0) {

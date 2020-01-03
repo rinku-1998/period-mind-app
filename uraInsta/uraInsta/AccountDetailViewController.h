@@ -13,8 +13,9 @@ NS_ASSUME_NONNULL_BEGIN
 @interface AccountDetailViewController : UIViewController
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *btnEditAccountDetail;
 @property (strong, nonatomic) IBOutlet UILabel *labelAccountEmail;
-@property (strong, nonatomic) IBOutlet UILabel *labelAccountName;
-@property (strong, nonatomic) IBOutlet UITextView *textAccountDetail;
+@property (strong, nonatomic) IBOutlet UILabel *labelAccountTopName;
+@property (strong, nonatomic) IBOutlet UILabel *labelAccountBottomName;
+@property (strong, nonatomic) IBOutlet UITextView *labelAccountDetail;
 
 @end
 
