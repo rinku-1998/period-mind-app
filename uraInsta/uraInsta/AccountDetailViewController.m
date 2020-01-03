@@ -47,8 +47,9 @@
     {
         AccountDetailEditViewController *editPage = segue.destinationViewController;
         editPage.accountEmail=_labelAccountEmail.text;
-        editPage.accountName=_labelAccountName.text;
-        editPage.accountDetail=_textAccountDetail.text;
+        editPage.accountTopName=_labelAccountTopName.text;
+        editPage.accountBottomName=_labelAccountBottomName.text;
+        editPage.accountDetail=_labelAccountDetail.text;
         
     }
 }
@@ -57,8 +58,9 @@
     if ([backSegue.sourceViewController isKindOfClass:[AccountDetailEditViewController class]])
     {
         AccountDetailEditViewController *editPage = backSegue.sourceViewController;
-        _labelAccountName.text=editPage.textAcountName.text;
-        _textAccountDetail.text=editPage.textAccountDetail.text;
+        _labelAccountTopName.text=editPage.textAccountTopName.text;
+        _labelAccountBottomName.text=editPage.textAccountBottomName.text;
+        _labelAccountDetail.text=editPage.textAccountDetail.text;
     }
 }
 -(void)getMyProfileInfo{

@@ -17,8 +17,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    _labelAccountEmail.text=self.accountEmail;
-    _textAcountName.text=self.accountName;
+    _textAccountEmail.text=self.accountEmail;
+    _textAccountTopName.text=self.accountTopName;
+    _textAccountBottomName.text=self.accountBottomName;
     _textAccountDetail.text=self.accountDetail;
 }
 
