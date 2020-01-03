@@ -9,7 +9,9 @@
 #import "ViewController.h"
 
 @interface ViewController ()
-
+{
+    UIRefreshControl *refreshControl;
+}
 @end
 
 @implementation ViewController
@@ -30,6 +32,12 @@
             [testarr replaceObjectAtIndex:i withObject:s];
         }
     }
+    
+    //refreshControl宣告
+    refreshControl = [[UIRefreshControl alloc] init];
+    refreshControl.attributedTitle = [[NSMutableAttributedString alloc]initWithString:@"刷新中..."];
+    [refreshControl addTarget:self action:@selector(pullToRefresh) forControlEvents:UIControlEventValueChanged];
+    [_mytableview setRefreshControl:refreshControl];
     
     [self getPostCentent];
 // Do any additional setup after loading the view.
@@ -100,7 +108,7 @@
 //    if (!cell) {
 //        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
 //    }
-    NSString *str = [testarr objectAtIndex:indexPath.row];
+//    NSString *str = [testarr objectAtIndex:indexPath.row];
     UITextView *tv = [cell viewWithTag:1];
     UILabel *accountName = [cell viewWithTag:2];
     UIImageView *postImage = [cell viewWithTag:4];
@@ -182,11 +190,14 @@
         }else{
             if(data){
                 UIImage *image = [UIImage imageWithData:data];
-                [self->imageDict setObject:image forKey:[NSString stringWithFormat:@"%ld", index]];
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    [self->_mytableview reloadData];
-                                
-                });
+                if (image!=nil) {
+                    [self->imageDict setObject:image forKey:[NSString stringWithFormat:@"%ld", index]];
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        [self->_mytableview reloadData];
+                                    
+                    });
+                }
+                
             }
             
         }
@@ -195,5 +206,12 @@
     [task resume];
 }
 - (IBAction)editProfile:(id)sender {
+}
+-(void)pullToRefresh
+{
+    [postArray removeAllObjects];
+    [imageDict removeAllObjects];
+    [self getPostCentent];
+    [refreshControl endRefreshing];
 }
 @end
