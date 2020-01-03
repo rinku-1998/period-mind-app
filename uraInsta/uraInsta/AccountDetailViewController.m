@@ -17,6 +17,9 @@
 @synthesize loadOnce;
 
 - (void)viewDidLoad {
+    _editProfile.layer.borderWidth = 1.0f;
+    _editProfile.layer.borderColor = [UIColor lightGrayColor].CGColor;
+    
     [super viewDidLoad];
     self.loadOnce = false;
     // Do any additional setup after loading the view.

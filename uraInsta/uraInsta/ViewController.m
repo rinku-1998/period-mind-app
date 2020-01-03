@@ -30,7 +30,9 @@
             [testarr replaceObjectAtIndex:i withObject:s];
         }
     }
-    // Do any additional setup after loading the view.
+    
+    [self getPostCentent];
+// Do any additional setup after loading the view.
 //    int rgbValue = 0xF44336;
 //    [_button_postAndShare setBackgroundColor:[UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]];
 //    [_button_postAndShare setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
@@ -74,7 +76,7 @@
 //    return 220;
 //}
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return [testarr count];
+    return [postArray count];
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
 //    if (indexPath.row==0) {
@@ -100,7 +102,19 @@
 //    }
     NSString *str = [testarr objectAtIndex:indexPath.row];
     UITextView *tv = [cell viewWithTag:1];
-    tv.text = [testarr objectAtIndex:indexPath.row];
+    UILabel *accountName = [cell viewWithTag:2];
+    UIImageView *postImage = [cell viewWithTag:4];
+    UILabel *postTime = [cell viewWithTag:5];
+    NSDictionary *post_data = [postArray objectAtIndex:indexPath.row];
+    tv.text = [post_data objectForKey:@"postContent"];
+    [tv setEditable:NO];
+    accountName.text = [post_data objectForKey:@"accountName"];
+    postTime.text = [post_data objectForKey:@"postTime"];
+    if([imageDict objectForKey:[NSString stringWithFormat:@"%ld", indexPath.row]]){
+        postImage.image = [imageDict objectForKey:[NSString stringWithFormat:@"%ld", indexPath.row]];
+    }
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+//    tv.text = [testarr objectAtIndex:indexPath.row];
     return cell;
 }
 //- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
@@ -119,4 +133,67 @@
 ////    }
 //    return 500.f;
 //}
+
+
+
+-(void)getPostCentent{
+    NSString *url_string = @"http://127.0.0.1:5000/api/index";
+    NSURL *url = [NSURL URLWithString:url_string];
+    
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+    [request setHTTPMethod:@"GET"];
+    NSURLSession *session = [NSURLSession sharedSession];
+    NSURLSessionDataTask *task = [session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        if(error){
+            NSLog(@"Get error :%@", error.localizedDescription);
+        }else{
+            NSError* json_load_rror;
+            
+            
+            NSArray *jsonArray = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&json_load_rror];
+            postArray = jsonArray;
+            NSLog(@"%lu", [jsonArray count]);
+            NSInteger length = [jsonArray count];
+            imageDict = [NSMutableDictionary new];
+            for(int i=0;i<length;i++){
+                [self getPostImage: [jsonArray[i] objectForKey:@"postImage"] currentIndex:i];
+            }
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+//                [_mytableview reloadData];
+            });
+        }
+        
+    }];
+    [task resume];
+}
+
+-(void)getPostImage:(NSString *)imgName currentIndex:(NSInteger)index{
+    NSLog(@"%@", imgName);
+    NSString *img_url = [NSString stringWithFormat:@"http://127.0.0.1:5000/static/images/%@", imgName];
+    NSURL *url = [NSURL URLWithString:img_url];
+    
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+    [request setHTTPMethod:@"GET"];
+    NSURLSession *session = [NSURLSession sharedSession];
+    NSURLSessionDataTask *task = [session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        if(error){
+            NSLog(@"Get error :%@", error.localizedDescription);
+        }else{
+            if(data){
+                UIImage *image = [UIImage imageWithData:data];
+                [self->imageDict setObject:image forKey:[NSString stringWithFormat:@"%ld", index]];
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [self->_mytableview reloadData];
+                                
+                });
+            }
+            
+        }
+        
+    }];
+    [task resume];
+}
+- (IBAction)editProfile:(id)sender {
+}
 @end

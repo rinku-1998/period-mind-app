@@ -7,15 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <QuartzCore/QuartzCore.h>
 
 @interface ViewController : UIViewController <UITextViewDelegate,UITableViewDelegate,UITableViewDataSource>
 {
     NSMutableArray *testarr;
+    NSMutableArray *postArray;
+    NSMutableDictionary *imageDict;
 }
 @property (strong, nonatomic) IBOutlet UITableView *mytableview;
 @property (strong, nonatomic) IBOutlet UITextField *textEmail;
 @property (strong, nonatomic) IBOutlet UITextField *textPassword;
 @property (strong, nonatomic) IBOutlet UITextView *labelText;
+
 
 @end
 
