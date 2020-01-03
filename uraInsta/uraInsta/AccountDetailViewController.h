@@ -17,6 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (strong, nonatomic) IBOutlet UILabel *labelAccountTopName;
 @property (strong, nonatomic) IBOutlet UILabel *labelAccountBottomName;
 @property (strong, nonatomic) IBOutlet UITextView *labelAccountDetail;
+@property (strong, nonatomic) IBOutlet UILabel *labelCreateTime;
 
 @property bool loadOnce;
 

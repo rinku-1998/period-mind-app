@@ -71,8 +71,8 @@
     [task resume];
 }
 -(void)changeProfile:(NSString *)csrf_token{
-    NSString *username = self.textAcountName.text;
-    NSString *displayname = self.textAccountDisplayName.text;
+    NSString *username = self.textAccountTopName.text;
+    NSString *displayname = self.textAccountBottomName.text;
     NSString *email = self.textAccountEmail.text;
     NSString *profile_info = self.textAccountDetail.text;
     NSString *url_string = @"http://127.0.0.1:5000/api/editProfile";

@@ -452,6 +452,7 @@
                         <outlet property="labelAccountDetail" destination="0wv-8G-DX8" id="Zuq-mR-I1i"/>
                         <outlet property="labelAccountEmail" destination="lt9-YI-mtj" id="Y0d-5I-pob"/>
                         <outlet property="labelAccountTopName" destination="IXH-aQ-fgw" id="RDl-vK-FuX"/>
+                        <outlet property="labelCreateTime" destination="MZS-Cq-Adb" id="C68-cK-xjS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pEJ-cu-mvr" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1204,7 +1205,11 @@
                         <viewLayoutGuide key="safeArea" id="HtL-pF-E7h"/>
                     </view>
                     <navigationItem key="navigationItem" id="vdj-2z-xNV">
-                        <barButtonItem key="rightBarButtonItem" title="儲存" id="q75-zk-YTb"/>
+                        <barButtonItem key="rightBarButtonItem" title="儲存" id="q75-zk-YTb">
+                            <connections>
+                                <action selector="saveAndBack:" destination="6Qh-ao-phE" id="cVa-gm-G6u"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="textAccountBottomName" destination="8Tj-QD-jGt" id="CGB-jj-inx"/>

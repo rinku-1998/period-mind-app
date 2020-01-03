@@ -80,13 +80,13 @@
             NSString *result = [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
             NSLog(@"%@", result);
             dispatch_async(dispatch_get_main_queue(), ^{
-                self.labelAccountName.text = [jsonDict objectForKey:@"username"];
+                self.labelAccountTopName.text = [jsonDict objectForKey:@"username"];
                 self.labelAccountEmail.text = [jsonDict objectForKey:@"email"];
                 NSString *display_name =[[NSString alloc]init];
                 display_name = @"@";
                 display_name = [display_name stringByAppendingString:[jsonDict objectForKey:@"display_name"]];
-                self.labelAccountDisplayName.text = display_name;
-                self.textAccountDetail.text = [jsonDict objectForKey:@"profile_info"];
+                self.labelAccountBottomName.text = display_name;
+                self.labelAccountDetail.text = [jsonDict objectForKey:@"profile_info"];
                 self.labelCreateTime.text = [jsonDict objectForKey:@"createTime"];
             });
         }
