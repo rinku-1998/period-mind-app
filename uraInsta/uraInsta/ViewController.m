@@ -118,6 +118,7 @@
     [tv setEditable:NO];
     accountName.text = [post_data objectForKey:@"accountName"];
     postTime.text = [post_data objectForKey:@"postTime"];
+    postImage.image=nil;
     if([imageDict objectForKey:[NSString stringWithFormat:@"%ld", indexPath.row]]){
         postImage.image = [imageDict objectForKey:[NSString stringWithFormat:@"%ld", indexPath.row]];
     }
@@ -141,7 +142,10 @@
 ////    }
 //    return 500.f;
 //}
-
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [self performSegueWithIdentifier:@"gotoPostAndComment" sender:nil];
+}
 
 
 -(void)getPostCentent{
@@ -164,7 +168,14 @@
             NSInteger length = [jsonArray count];
             imageDict = [NSMutableDictionary new];
             for(int i=0;i<length;i++){
-                [self getPostImage: [jsonArray[i] objectForKey:@"postImage"] currentIndex:i];
+                NSLog(@"%d========%@",i,[jsonArray[i] objectForKey:@"postImage"]);
+                if ([[jsonArray[i] objectForKey:@"postImage"] isEqual:[NSNull null]]) {
+                    NSLog(@"空的");
+                }
+                else
+                {
+                    [self getPostImage: [jsonArray[i] objectForKey:@"postImage"] currentIndex:i];
+                }
             }
             
             dispatch_async(dispatch_get_main_queue(), ^{
@@ -189,12 +200,13 @@
             NSLog(@"Get error :%@", error.localizedDescription);
         }else{
             if(data){
-                UIImage *image = [UIImage imageWithData:data];
+                UIImage *image = [[UIImage alloc]initWithData:data];
+//                UIImage *image = [UIImage imageWithData:data];
                 if (image!=nil) {
                     [self->imageDict setObject:image forKey:[NSString stringWithFormat:@"%ld", index]];
                     dispatch_async(dispatch_get_main_queue(), ^{
                         [self->_mytableview reloadData];
-                                    
+                        [refreshControl endRefreshing];
                     });
                 }
                 
@@ -212,6 +224,5 @@
     [postArray removeAllObjects];
     [imageDict removeAllObjects];
     [self getPostCentent];
-    [refreshControl endRefreshing];
 }
 @end
