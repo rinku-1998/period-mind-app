@@ -10,7 +10,11 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface NewPostViewController : UIViewController <UITextViewDelegate>
+@interface NewPostViewController : UIViewController <UITextViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate> {
+    UIImagePickerController *imagePicker;
+    UIImage *selectedImage;
+}
+
 @property (strong, nonatomic) IBOutlet UITextView *textPostContent;
 
 @end

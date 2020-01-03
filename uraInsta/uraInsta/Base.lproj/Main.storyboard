@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Clv-kg-PUF">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Clv-kg-PUF">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -197,6 +197,9 @@
                                     <constraint firstAttribute="height" constant="25" id="pzG-sa-p0O"/>
                                 </constraints>
                                 <state key="normal" title="圖片" image="icon_picture.png"/>
+                                <connections>
+                                    <action selector="selectPicture:" destination="24v-ZV-aaf" eventType="touchUpInside" id="gFT-fq-7id"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cXq-Mh-sZC">
                                 <rect key="frame" x="47" y="647" width="25" height="25"/>
@@ -215,6 +218,9 @@
                                 <state key="normal" image="icon_send.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="postAndUpload:" destination="24v-ZV-aaf" eventType="touchUpInside" id="qO6-7u-UfO"/>
+                                </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="QfO-cI-dJT">
                                 <rect key="frame" x="15" y="102" width="384" height="537"/>
@@ -439,6 +445,13 @@
                         <viewLayoutGuide key="safeArea" id="ond-aX-hEU"/>
                     </view>
                     <navigationItem key="navigationItem" id="udO-Gu-kjs"/>
+                    <connections>
+                        <outlet property="labelAccountDisplayName" destination="1Kb-pd-qEV" id="nuY-Nt-7wa"/>
+                        <outlet property="labelAccountEmail" destination="lt9-YI-mtj" id="jfS-uM-G9Z"/>
+                        <outlet property="labelAccountName" destination="IXH-aQ-fgw" id="MZZ-6L-7G1"/>
+                        <outlet property="labelCreateTime" destination="MZS-Cq-Adb" id="k8a-hE-qCg"/>
+                        <outlet property="textAccountDetail" destination="0wv-8G-DX8" id="EO2-tz-f3s"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pEJ-cu-mvr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1113,13 +1126,18 @@
                     <navigationItem key="navigationItem" id="vdj-2z-xNV">
                         <barButtonItem key="rightBarButtonItem" title="儲存" id="q75-zk-YTb">
                             <connections>
-                                <segue destination="Wj0-OF-b03" kind="unwind" unwindAction="backFromAccountDetailEditViewController:" id="gtk-JY-Re2"/>
+                                <action selector="saveAndBack:" destination="6Qh-ao-phE" id="smy-uh-K4w"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="textAccountDetail" destination="9p7-Oe-5Wk" id="x1U-9M-TXl"/>
+                        <outlet property="textAccountDisplayName" destination="8Tj-QD-jGt" id="6p7-6Y-aXU"/>
+                        <outlet property="textAccountEmail" destination="ElA-cg-3fu" id="mOS-RX-Mom"/>
+                        <outlet property="textAcountName" destination="1j7-Zh-oao" id="B0m-kM-QSx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ne1-uF-Gsa" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="Wj0-OF-b03" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="4076.811594202899" y="676.63043478260875"/>
         </scene>

@@ -59,6 +59,7 @@
 
 - (IBAction)btn_login:(id)sender {
     [self getCSRFTokenAndLogin];
+//    [self performSegueWithIdentifier:@"gotoindex" sender:nil];
     
 }
 
@@ -113,6 +114,16 @@
         if(error){
             // If error happened, print out error msg
             NSLog(@"Get error :%@", error.localizedDescription);
+            dispatch_async(dispatch_get_main_queue(), ^{
+                UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"伺服器沒有回應" message:@"請確認您的網路線線，然後再試一次" preferredStyle:UIAlertControllerStyleAlert];
+                UIAlertAction *dismissMsg = [UIAlertAction actionWithTitle:@"確定" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+                    
+                }];
+                [alert addAction:dismissMsg];
+                [self presentViewController:alert animated:YES completion:nil];
+            });
+            
+            
         }else{
             NSString *target_tag = @"<input id=\"csrf_token\" name=\"csrf_token\" type=\"hidden\" value=\""; //Set catch tag
             NSString *result = [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding]; //HTML content
@@ -149,6 +160,7 @@
         if(error){
             // If error happened, print out error msg
             NSLog(@"Get error :%@", error.localizedDescription);
+            
         }else{
             NSString *result = [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
             NSLog(@"%@", result);

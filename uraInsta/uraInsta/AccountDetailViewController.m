@@ -14,10 +14,22 @@
 @end
 
 @implementation AccountDetailViewController
+@synthesize loadOnce;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.loadOnce = false;
     // Do any additional setup after loading the view.
+    [self getMyProfileInfo];
+}
+
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    if(self.loadOnce){
+        [self getMyProfileInfo];
+    }
+    self.loadOnce = true;
 }
 
 /*
@@ -49,5 +61,35 @@
         _textAccountDetail.text=editPage.textAccountDetail.text;
     }
 }
+-(void)getMyProfileInfo{
+    NSString *url_string = @"http://127.0.0.1:5000/api/myprofile";
+    NSURL *url = [NSURL URLWithString:url_string];
+    
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+    [request setHTTPMethod:@"GET"];
+    NSURLSession *session = [NSURLSession sharedSession];
+    NSURLSessionDataTask *task = [session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        if(error){
+            NSLog(@"Get error :%@", error.localizedDescription);
+        }else{
+            NSError* json_load_rror;
+            NSDictionary *jsonDict = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&json_load_rror];
 
+            NSString *result = [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
+            NSLog(@"%@", result);
+            dispatch_async(dispatch_get_main_queue(), ^{
+                self.labelAccountName.text = [jsonDict objectForKey:@"username"];
+                self.labelAccountEmail.text = [jsonDict objectForKey:@"email"];
+                NSString *display_name =[[NSString alloc]init];
+                display_name = @"@";
+                display_name = [display_name stringByAppendingString:[jsonDict objectForKey:@"display_name"]];
+                self.labelAccountDisplayName.text = display_name;
+                self.textAccountDetail.text = [jsonDict objectForKey:@"profile_info"];
+                self.labelCreateTime.text = [jsonDict objectForKey:@"createTime"];
+            });
+        }
+        
+    }];
+    [task resume];
+}
 @end
