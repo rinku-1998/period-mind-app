@@ -199,7 +199,7 @@
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="25" id="Rbv-uY-Ebd"/>
                                     <constraint firstAttribute="height" constant="25" id="pzG-sa-p0O"/>
                                 </constraints>
-                                <state key="normal" title="圖片" image="post_picture"/>
+                                <state key="normal" title="圖片" image="post_picture_new-1"/>
                                 <connections>
                                     <action selector="selectPicture:" destination="24v-ZV-aaf" eventType="touchUpInside" id="gFT-fq-7id"/>
                                 </connections>
@@ -210,7 +210,7 @@
                                     <constraint firstAttribute="width" constant="25" id="NhE-UH-CV5"/>
                                     <constraint firstAttribute="height" constant="25" id="rpy-wr-6GC"/>
                                 </constraints>
-                                <state key="normal" title="定位" image="post_location"/>
+                                <state key="normal" title="定位" image="post_location_new-1"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jpb-qO-77s">
                                 <rect key="frame" x="374" y="647" width="25" height="25"/>
@@ -218,7 +218,7 @@
                                     <constraint firstAttribute="width" constant="25" id="0Eb-Va-h7R"/>
                                     <constraint firstAttribute="height" constant="25" id="6ez-yF-5fr"/>
                                 </constraints>
-                                <state key="normal" image="post_send">
+                                <state key="normal" image="post_send_new-1">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -1763,12 +1763,13 @@
         <image name="icon_send.png" width="64" height="64"/>
         <image name="icon_share" width="128" height="128"/>
         <image name="login_icon" width="530" height="280"/>
-        <image name="post_location" width="128" height="128"/>
-        <image name="post_picture" width="128" height="128"/>
+        <image name="post_location_new-1" width="128" height="128"/>
+        <image name="post_picture_new-1" width="128" height="128"/>
         <image name="post_send" width="128" height="128"/>
-        <image name="tab_home" width="64" height="64"/>
-        <image name="tab_post" width="64" height="64"/>
-        <image name="tab_profile" width="64" height="64"/>
-        <image name="tab_setting" width="64" height="64"/>
+        <image name="post_send_new-1" width="128" height="128"/>
+        <image name="tab_home" width="42.666667938232422" height="42.666667938232422"/>
+        <image name="tab_post" width="42.666667938232422" height="42.666667938232422"/>
+        <image name="tab_profile" width="42.666667938232422" height="42.666667938232422"/>
+        <image name="tab_setting" width="42.666667938232422" height="42.666667938232422"/>
     </resources>
 </document>
