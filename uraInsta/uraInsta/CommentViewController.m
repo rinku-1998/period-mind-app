@@ -21,7 +21,11 @@
     // Do any additional setup after loading the view.
     NSLog(@"postID=%@", [self.postInfo objectForKey:@"postID"]);
     [self getCommentCentent:[self.postInfo objectForKey:@"postID"]];
+    self.navigationItem.backBarButtonItem.title = @"";
  
+}
+- (IBAction)btn_postComment:(id)sender {
+    [self getCSRFTokenAndComment];
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -103,5 +107,83 @@
         
     }];
     [task resume];
+}
+
+-(void)getCSRFTokenAndComment{
+    
+    NSString *url_string = @"http://127.0.0.1:5000/api/comment";
+    __block NSString *csrf_token = @"";
+    NSURL *url = [NSURL URLWithString:url_string];
+    
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+    [request setHTTPMethod:@"GET"];
+    
+    NSURLSession *session = [NSURLSession sharedSession];
+    
+    NSURLSessionDataTask *task = [session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        
+        if(error){
+            // If error happened, print out error msg
+            NSLog(@"Get error :%@", error.localizedDescription);
+        }else{
+            NSString *target_tag = @"<input id=\"csrf_token\" name=\"csrf_token\" type=\"hidden\" value=\""; //Set catch tag
+            NSString *result = [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding]; //HTML content
+            if([result rangeOfString:target_tag].location){
+                NSUInteger start_point = [result rangeOfString:target_tag].location + [result rangeOfString:target_tag].length;
+                csrf_token = [result substringWithRange:NSMakeRange(start_point, 91)];
+                //If csrf token is caught successfully, do http post request in main thread
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    NSLog(@"csrf=%@", csrf_token);
+                    [self sendComment:csrf_token];
+                });
+            }
+        }
+    }];
+    [task resume];
+}
+-(void)sendComment:(NSString *)csrf_token{
+    NSString *commentContent = self.textCommentContent.text;
+    NSString *url_string = @"http://127.0.0.1:5000/api/comment";
+    NSURL *url = [NSURL URLWithString:url_string];
+    NSString *boundary = [[NSUUID UUID] UUIDString];
+    NSString *headerString = [NSString stringWithFormat:@"multipart/form-data; boundary=%@", boundary];
+    
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+    [request setHTTPMethod:@"POST"];
+    [request setTimeoutInterval:30.0];
+    [request addValue:@"gzip" forHTTPHeaderField:@"Accept-Encoding"];
+    [request setValue:headerString forHTTPHeaderField:@"Content-Type"];
+    
+    NSMutableData *httpBody = [NSMutableData data];
+    // csrf_token
+    NSString *csrfTokenParam = [NSString stringWithFormat:@"--%@\r\nContent-Disposition: form-data; name=\"%@\"\r\n\r\n%@\r\n", boundary, @"csrf_token", csrf_token, nil];
+    [httpBody appendData:[csrfTokenParam dataUsingEncoding:NSUTF8StringEncoding]];
+    // Post content text
+    NSString *postIDParam = [NSString stringWithFormat:@"--%@\r\nContent-Disposition: form-data; name=\"%@\"\r\n\r\n%@\r\n", boundary, @"postID", [self.postInfo objectForKey:@"postID"], nil];
+    [httpBody appendData:[postIDParam dataUsingEncoding:NSUTF8StringEncoding]];
+    NSString *commentParam = [NSString stringWithFormat:@"--%@\r\nContent-Disposition: form-data; name=\"%@\"\r\n\r\n%@\r\n", boundary, @"commentContent", commentContent, nil];
+    [httpBody appendData:[commentParam dataUsingEncoding:NSUTF8StringEncoding]];
+    
+    NSString *fileParam = [NSString stringWithFormat:@"--%@\r\nContent-Disposition: form-data; name=\"%@\";filename=\"%@\"\r\nContent-Type: application/octet-stream\r\n\r\n", boundary, @"commentImage", @"", nil];
+    [httpBody appendData:[fileParam dataUsingEncoding:NSUTF8StringEncoding]];
+    
+    
+    NSString *endSting = [NSString stringWithFormat:@"--%@--", boundary];
+    [httpBody appendData:[endSting dataUsingEncoding:NSUTF8StringEncoding]];
+    
+    NSURLSession *session = [NSURLSession sharedSession];
+    NSURLSessionUploadTask *upload_task = [session uploadTaskWithRequest:request fromData:httpBody completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        if(error){
+            NSLog(@"%@", error);
+        }else{
+            NSLog(@"Upload success!");
+            dispatch_async(dispatch_get_main_queue(), ^{
+                self.textCommentContent.text = @"";
+                [self.navigationController popToRootViewControllerAnimated:YES];
+            });
+        }
+    }];
+    [upload_task resume];
+    
 }
 @end

@@ -22,6 +22,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (strong, nonatomic) NSString *postTime;
 @property (strong, nonatomic) NSString *postContent;
 @property (strong, nonatomic) NSMutableDictionary *postInfo;
+@property (strong, nonatomic) IBOutlet UITextView *textCommentContent;
 
 @end
 
