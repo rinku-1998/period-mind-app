@@ -950,7 +950,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                             </textField>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="login_icon" translatesAutoresizingMaskIntoConstraints="NO" id="gcC-SZ-ygf">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="login_icon-1" translatesAutoresizingMaskIntoConstraints="NO" id="gcC-SZ-ygf">
                                                 <rect key="frame" x="65" y="52" width="284" height="145"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
@@ -1762,7 +1762,7 @@
         <image name="icon_registerTime.png" width="64" height="64"/>
         <image name="icon_send.png" width="64" height="64"/>
         <image name="icon_share_new-1" width="128" height="128"/>
-        <image name="login_icon" width="530" height="280"/>
+        <image name="login_icon-1" width="504" height="320"/>
         <image name="post_location_new-1" width="128" height="128"/>
         <image name="post_picture_new-1" width="128" height="128"/>
         <image name="post_send" width="128" height="128"/>
