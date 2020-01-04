@@ -55,11 +55,11 @@
                                                         <constraint firstAttribute="height" constant="20" id="XaD-aN-r84"/>
                                                         <constraint firstAttribute="width" constant="20" id="rMS-DF-uGg"/>
                                                     </constraints>
-                                                    <state key="normal" title="Button" image="icon_like"/>
+                                                    <state key="normal" title="Button" image="icon_like_new-1"/>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5mX-pv-QYL">
                                                     <rect key="frame" x="44" y="316" width="20" height="20"/>
-                                                    <state key="normal" title="Button" image="icon_comment"/>
+                                                    <state key="normal" title="Button" image="icon_comment_new-1"/>
                                                 </button>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default_userAvatar" translatesAutoresizingMaskIntoConstraints="NO" id="yHb-2Q-yR6">
                                                     <rect key="frame" x="16" y="17" width="35" height="35"/>
@@ -76,7 +76,7 @@
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XiO-YH-rJV">
                                                     <rect key="frame" x="72" y="316" width="20" height="20"/>
-                                                    <state key="normal" title="Button" image="icon_share"/>
+                                                    <state key="normal" title="Button" image="icon_share_new-1"/>
                                                 </button>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="最後一個" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="QM3-49-rAi">
                                                     <rect key="frame" x="16" y="344" width="378" height="100.33333333333331"/>
@@ -335,7 +335,7 @@
                                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_email" translatesAutoresizingMaskIntoConstraints="NO" id="nrp-hJ-cJm">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_email_new-1" translatesAutoresizingMaskIntoConstraints="NO" id="nrp-hJ-cJm">
                                                 <rect key="frame" x="20" y="281.66666666666669" width="25" height="25"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="25" id="64t-eE-Ito"/>
@@ -351,7 +351,7 @@
                                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_createTime" translatesAutoresizingMaskIntoConstraints="NO" id="ws4-tc-jJx">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_createTime_new-1" translatesAutoresizingMaskIntoConstraints="NO" id="ws4-tc-jJx">
                                                 <rect key="frame" x="20" y="317.66666666666669" width="25" height="25"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="25" id="SD1-KF-yCf"/>
@@ -719,15 +719,15 @@
                                                         <constraint firstAttribute="width" constant="20" id="BBV-pO-BXp"/>
                                                         <constraint firstAttribute="height" constant="20" id="Hod-24-tRM"/>
                                                     </constraints>
-                                                    <state key="normal" title="Button" image="icon_like"/>
+                                                    <state key="normal" title="Button" image="icon_like_new-1"/>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mLY-b1-lpc">
                                                     <rect key="frame" x="44" y="316" width="20" height="20"/>
-                                                    <state key="normal" title="Button" image="icon_comment"/>
+                                                    <state key="normal" title="Button" image="icon_comment_new-1"/>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="36K-h7-ANK">
                                                     <rect key="frame" x="72" y="316" width="20" height="20"/>
-                                                    <state key="normal" title="Button" image="icon_share"/>
+                                                    <state key="normal" title="Button" image="icon_share_new-1"/>
                                                 </button>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default_userAvatar" translatesAutoresizingMaskIntoConstraints="NO" id="eif-no-qji">
                                                     <rect key="frame" x="16" y="17" width="35" height="35"/>
@@ -1751,17 +1751,17 @@
     <resources>
         <image name="defalut_postImage" width="512" height="512"/>
         <image name="default_userAvatar" width="512" height="512"/>
-        <image name="icon_comment" width="128" height="128"/>
         <image name="icon_comment.png" width="512" height="512"/>
-        <image name="icon_createTime" width="128" height="128"/>
-        <image name="icon_email" width="257" height="257"/>
+        <image name="icon_comment_new-1" width="128" height="128"/>
+        <image name="icon_createTime_new-1" width="128" height="128"/>
         <image name="icon_email.png" width="64" height="64"/>
-        <image name="icon_like" width="128" height="128"/>
+        <image name="icon_email_new-1" width="257" height="257"/>
+        <image name="icon_like_new-1" width="128" height="128"/>
         <image name="icon_location.png" width="64" height="64"/>
         <image name="icon_picture.png" width="64" height="64"/>
         <image name="icon_registerTime.png" width="64" height="64"/>
         <image name="icon_send.png" width="64" height="64"/>
-        <image name="icon_share" width="128" height="128"/>
+        <image name="icon_share_new-1" width="128" height="128"/>
         <image name="login_icon" width="530" height="280"/>
         <image name="post_location_new-1" width="128" height="128"/>
         <image name="post_picture_new-1" width="128" height="128"/>
