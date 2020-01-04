@@ -11,6 +11,11 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface RegisterViewController : UIViewController
+@property (strong, nonatomic) IBOutlet UITextField *textAccountName;
+@property (strong, nonatomic) IBOutlet UITextField *textPassword;
+@property (strong, nonatomic) IBOutlet UITextField *textPassword2;
+@property (strong, nonatomic) IBOutlet UITextField *textDisplayname;
+@property (strong, nonatomic) IBOutlet UITextField *textEmail;
 
 @end
 

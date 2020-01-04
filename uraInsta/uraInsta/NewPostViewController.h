@@ -16,6 +16,10 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 @property (strong, nonatomic) IBOutlet UITextView *textPostContent;
+@property (strong, nonatomic) IBOutlet UILabel *labelAccountName;
+@property (strong, nonatomic) IBOutlet UILabel *labelDisplayname;
+@property (strong, nonatomic) IBOutlet UIImageView *imgAvatar;
+@property (strong, nonatomic) IBOutlet UIImageView *imgPreviewImage;
 
 @end
 

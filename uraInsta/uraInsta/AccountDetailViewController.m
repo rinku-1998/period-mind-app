@@ -89,7 +89,10 @@
                 display_name = @"@";
                 display_name = [display_name stringByAppendingString:[jsonDict objectForKey:@"display_name"]];
                 self.labelAccountBottomName.text = display_name;
-                self.labelAccountDetail.text = [jsonDict objectForKey:@"profile_info"];
+                if(![[jsonDict objectForKey:@"profile_info"] isEqual:[NSNull null]]){
+                    self.labelAccountDetail.text = [jsonDict objectForKey:@"profile_info"];
+                }
+                
                 self.labelCreateTime.text = [jsonDict objectForKey:@"createTime"];
             });
         }

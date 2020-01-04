@@ -31,6 +31,8 @@
 		58E6EB0823A8776000D64345 /* tableHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58E6EB0723A8776000D64345 /* tableHeader.xib */; };
 		58FB64DE23AA104B0067809B /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58FB64DD23AA104B0067809B /* LoginViewController.m */; };
 		58FB64E123AA2DC60067809B /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58FB64E023AA2DC60067809B /* RegisterViewController.m */; };
+		6896B2C823C0A2BB00DBA991 /* LogoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6896B2C723C0A2BB00DBA991 /* LogoutViewController.m */; };
+		6896B2CB23C0A4B000DBA991 /* CommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6896B2CA23C0A4B000DBA991 /* CommentViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +92,10 @@
 		58FB64DD23AA104B0067809B /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		58FB64DF23AA2DC60067809B /* RegisterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
 		58FB64E023AA2DC60067809B /* RegisterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
+		6896B2C623C0A2BB00DBA991 /* LogoutViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LogoutViewController.h; sourceTree = "<group>"; };
+		6896B2C723C0A2BB00DBA991 /* LogoutViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LogoutViewController.m; sourceTree = "<group>"; };
+		6896B2C923C0A4B000DBA991 /* CommentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommentViewController.h; sourceTree = "<group>"; };
+		6896B2CA23C0A4B000DBA991 /* CommentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommentViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +147,10 @@
 			isa = PBXGroup;
 			children = (
 				48C350F5239F3F6200091EC3 /* Main.storyboard */,
+				6896B2C923C0A4B000DBA991 /* CommentViewController.h */,
+				6896B2CA23C0A4B000DBA991 /* CommentViewController.m */,
+				6896B2C623C0A2BB00DBA991 /* LogoutViewController.h */,
+				6896B2C723C0A2BB00DBA991 /* LogoutViewController.m */,
 				583341CF23B3653800F27DD8 /* icon_email.png */,
 				583341CE23B3653800F27DD8 /* icon_registerTime.png */,
 				583341C823B3602900F27DD8 /* icon_location.png */,
@@ -333,6 +343,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6896B2CB23C0A4B000DBA991 /* CommentViewController.m in Sources */,
 				47951FED23B0EE41001A1FE5 /* FindPasswordByEmailViewController.m in Sources */,
 				583341C723B35D0900F27DD8 /* NewPostViewController.m in Sources */,
 				479FDDD223B13774003548E4 /* SetNewPasswordViewController.m in Sources */,
@@ -341,6 +352,7 @@
 				48C350F4239F3F6200091EC3 /* ViewController.m in Sources */,
 				48C350FF239F3F6300091EC3 /* main.m in Sources */,
 				479FDDD823B13AAB003548E4 /* AccountDetailEditViewController.m in Sources */,
+				6896B2C823C0A2BB00DBA991 /* LogoutViewController.m in Sources */,
 				48C350F1239F3F6200091EC3 /* AppDelegate.m in Sources */,
 				479FDDD523B13A63003548E4 /* AccountDetailViewController.m in Sources */,
 			);

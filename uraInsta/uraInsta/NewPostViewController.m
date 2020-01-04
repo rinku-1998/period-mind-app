@@ -23,6 +23,7 @@
         _textPostContent.text = @"寫點什麼吧";
     
         [_textPostContent setDelegate:self];
+    [self getMyProfileInfo];
 }
 
 /*
@@ -195,6 +196,33 @@
     [upload_task resume];
     
 }
+-(void)getMyProfileInfo{
+    NSString *url_string = @"http://127.0.0.1:5000/api/myprofile";
+    NSURL *url = [NSURL URLWithString:url_string];
+    
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+    [request setHTTPMethod:@"GET"];
+    NSURLSession *session = [NSURLSession sharedSession];
+    NSURLSessionDataTask *task = [session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        if(error){
+            NSLog(@"Get error :%@", error.localizedDescription);
+        }else{
+            NSError* json_load_rror;
+            NSDictionary *jsonDict = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&json_load_rror];
 
+            NSString *result = [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
+            NSLog(@"%@", result);
+            dispatch_async(dispatch_get_main_queue(), ^{
+                self.labelAccountName.text = [jsonDict objectForKey:@"username"];
+                NSString *display_name =[[NSString alloc]init];
+                display_name = @"@";
+                display_name = [display_name stringByAppendingString:[jsonDict objectForKey:@"display_name"]];
+                self.labelDisplayname.text = display_name;
+            });
+        }
+        
+    }];
+    [task resume];
+}
 
 @end
