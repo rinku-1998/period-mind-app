@@ -8,11 +8,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--主頁-->
+        <!--Navigation Controller-->
         <scene sceneID="7FX-hz-E1Z">
             <objects>
                 <navigationController id="hge-Z6-PmK" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="主頁" id="pTu-e9-U05"/>
+                    <tabBarItem key="tabBarItem" title="" image="tab_home" id="pTu-e9-U05"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hdw-d0-v8h">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -43,7 +43,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="464.33334350585938"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="4" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_email.png" translatesAutoresizingMaskIntoConstraints="NO" id="BEI-wB-9nf">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="4" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defalut_postImage" translatesAutoresizingMaskIntoConstraints="NO" id="BEI-wB-9nf">
                                                     <rect key="frame" x="0.0" y="60" width="414" height="239"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="239" id="5gH-7G-1jV"/>
@@ -55,13 +55,13 @@
                                                         <constraint firstAttribute="height" constant="20" id="XaD-aN-r84"/>
                                                         <constraint firstAttribute="width" constant="20" id="rMS-DF-uGg"/>
                                                     </constraints>
-                                                    <state key="normal" title="Button" image="icon_like.png"/>
+                                                    <state key="normal" title="Button" image="icon_like"/>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5mX-pv-QYL">
                                                     <rect key="frame" x="44" y="316" width="20" height="20"/>
-                                                    <state key="normal" title="Button" image="icon_comment.png"/>
+                                                    <state key="normal" title="Button" image="icon_comment"/>
                                                 </button>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yHb-2Q-yR6">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default_userAvatar" translatesAutoresizingMaskIntoConstraints="NO" id="yHb-2Q-yR6">
                                                     <rect key="frame" x="16" y="17" width="35" height="35"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="35" id="BXW-xW-d9z"/>
@@ -76,7 +76,7 @@
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XiO-YH-rJV">
                                                     <rect key="frame" x="72" y="316" width="20" height="20"/>
-                                                    <state key="normal" title="Button" image="icon_share.png"/>
+                                                    <state key="normal" title="Button" image="icon_share"/>
                                                 </button>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="最後一個" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="QM3-49-rAi">
                                                     <rect key="frame" x="16" y="344" width="378" height="100.33333333333331"/>
@@ -173,7 +173,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3dT-ai-xHT">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default_userAvatar" translatesAutoresizingMaskIntoConstraints="NO" id="3dT-ai-xHT">
                                 <rect key="frame" x="15" y="64" width="35" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="35" id="65P-ZX-TfZ"/>
@@ -199,7 +199,7 @@
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="25" id="Rbv-uY-Ebd"/>
                                     <constraint firstAttribute="height" constant="25" id="pzG-sa-p0O"/>
                                 </constraints>
-                                <state key="normal" title="圖片" image="icon_picture.png"/>
+                                <state key="normal" title="圖片" image="post_picture"/>
                                 <connections>
                                     <action selector="selectPicture:" destination="24v-ZV-aaf" eventType="touchUpInside" id="gFT-fq-7id"/>
                                 </connections>
@@ -210,7 +210,7 @@
                                     <constraint firstAttribute="width" constant="25" id="NhE-UH-CV5"/>
                                     <constraint firstAttribute="height" constant="25" id="rpy-wr-6GC"/>
                                 </constraints>
-                                <state key="normal" title="定位" image="icon_location.png"/>
+                                <state key="normal" title="定位" image="post_location"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jpb-qO-77s">
                                 <rect key="frame" x="374" y="647" width="25" height="25"/>
@@ -218,7 +218,7 @@
                                     <constraint firstAttribute="width" constant="25" id="0Eb-Va-h7R"/>
                                     <constraint firstAttribute="height" constant="25" id="6ez-yF-5fr"/>
                                 </constraints>
-                                <state key="normal" image="icon_send.png">
+                                <state key="normal" image="post_send">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -294,11 +294,11 @@
             </objects>
             <point key="canvasLocation" x="3357.971014492754" y="2100"/>
         </scene>
-        <!--自己-->
+        <!--Navigation Controller-->
         <scene sceneID="VTu-gU-D87">
             <objects>
                 <navigationController id="xCs-gf-dbV" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="自己" id="t4N-F3-UiZ"/>
+                    <tabBarItem key="tabBarItem" title="" image="tab_profile" id="t4N-F3-UiZ"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="PDZ-cB-3uO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -335,7 +335,7 @@
                                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_email.png" translatesAutoresizingMaskIntoConstraints="NO" id="nrp-hJ-cJm">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_email" translatesAutoresizingMaskIntoConstraints="NO" id="nrp-hJ-cJm">
                                                 <rect key="frame" x="20" y="281.66666666666669" width="25" height="25"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="25" id="64t-eE-Ito"/>
@@ -351,7 +351,7 @@
                                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_registerTime.png" translatesAutoresizingMaskIntoConstraints="NO" id="ws4-tc-jJx">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_createTime" translatesAutoresizingMaskIntoConstraints="NO" id="ws4-tc-jJx">
                                                 <rect key="frame" x="20" y="317.66666666666669" width="25" height="25"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="25" id="SD1-KF-yCf"/>
@@ -367,7 +367,7 @@
                                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FuS-ED-40v">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default_userAvatar" translatesAutoresizingMaskIntoConstraints="NO" id="FuS-ED-40v">
                                                 <rect key="frame" x="20" y="20" width="60" height="60"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="60" id="Fsi-Nh-1At"/>
@@ -579,11 +579,11 @@
             </objects>
             <point key="canvasLocation" x="-1151" y="1742"/>
         </scene>
-        <!--發文-->
+        <!--Navigation Controller-->
         <scene sceneID="E3F-9y-eR9">
             <objects>
                 <navigationController id="oEd-AV-v0A" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="發文" id="SLw-Eg-mKX"/>
+                    <tabBarItem key="tabBarItem" title="" image="tab_post" id="SLw-Eg-mKX"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7dD-da-lFd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -707,7 +707,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="464.33334350585938"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_email.png" translatesAutoresizingMaskIntoConstraints="NO" id="P8X-NR-U8x">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defalut_postImage" translatesAutoresizingMaskIntoConstraints="NO" id="P8X-NR-U8x">
                                                     <rect key="frame" x="0.0" y="60" width="414" height="239"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="239" id="gtt-Zh-zcQ"/>
@@ -719,17 +719,17 @@
                                                         <constraint firstAttribute="width" constant="20" id="BBV-pO-BXp"/>
                                                         <constraint firstAttribute="height" constant="20" id="Hod-24-tRM"/>
                                                     </constraints>
-                                                    <state key="normal" title="Button" image="icon_like.png"/>
+                                                    <state key="normal" title="Button" image="icon_like"/>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mLY-b1-lpc">
                                                     <rect key="frame" x="44" y="316" width="20" height="20"/>
-                                                    <state key="normal" title="Button" image="icon_comment.png"/>
+                                                    <state key="normal" title="Button" image="icon_comment"/>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="36K-h7-ANK">
                                                     <rect key="frame" x="72" y="316" width="20" height="20"/>
-                                                    <state key="normal" title="Button" image="icon_share.png"/>
+                                                    <state key="normal" title="Button" image="icon_share"/>
                                                 </button>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eif-no-qji">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default_userAvatar" translatesAutoresizingMaskIntoConstraints="NO" id="eif-no-qji">
                                                     <rect key="frame" x="16" y="17" width="35" height="35"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="35" id="ghb-Q2-FVm"/>
@@ -848,7 +848,7 @@
                                                         <constraint firstAttribute="height" constant="30" id="Q4M-Zl-Qrb"/>
                                                         <constraint firstAttribute="width" constant="30" id="iLp-iV-IFy"/>
                                                     </constraints>
-                                                    <state key="normal" title="Button" image="icon_send.png"/>
+                                                    <state key="normal" title="Button" image="post_send"/>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -950,7 +950,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                             </textField>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gcC-SZ-ygf">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="login_icon" translatesAutoresizingMaskIntoConstraints="NO" id="gcC-SZ-ygf">
                                                 <rect key="frame" x="65" y="52" width="284" height="145"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
@@ -1166,7 +1166,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bt8-5Z-rHb">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="384"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_email.png" translatesAutoresizingMaskIntoConstraints="NO" id="FVi-I7-sP3">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default_userAvatar" translatesAutoresizingMaskIntoConstraints="NO" id="FVi-I7-sP3">
                                                 <rect key="frame" x="150" y="36" width="114" height="114"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="FVi-I7-sP3" secondAttribute="height" multiplier="1:1" id="iMX-TG-IiY"/>
@@ -1295,11 +1295,11 @@
             </objects>
             <point key="canvasLocation" x="4076.811594202899" y="676.63043478260875"/>
         </scene>
-        <!--設定-->
+        <!--Navigation Controller-->
         <scene sceneID="Dfn-7M-r9V">
             <objects>
                 <navigationController id="9fM-Fc-oL1" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="設定" id="pIa-56-itx"/>
+                    <tabBarItem key="tabBarItem" title="" image="tab_setting" id="pIa-56-itx"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Oyn-3j-0f7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -1745,17 +1745,30 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LU1-Ld-68u" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4465" y="1414"/>
+            <point key="canvasLocation" x="790" y="1744"/>
         </scene>
     </scenes>
     <resources>
+        <image name="defalut_postImage" width="512" height="512"/>
+        <image name="default_userAvatar" width="512" height="512"/>
+        <image name="icon_comment" width="128" height="128"/>
         <image name="icon_comment.png" width="512" height="512"/>
+        <image name="icon_createTime" width="128" height="128"/>
+        <image name="icon_email" width="257" height="257"/>
         <image name="icon_email.png" width="64" height="64"/>
-        <image name="icon_like.png" width="512" height="512"/>
+        <image name="icon_like" width="128" height="128"/>
         <image name="icon_location.png" width="64" height="64"/>
         <image name="icon_picture.png" width="64" height="64"/>
         <image name="icon_registerTime.png" width="64" height="64"/>
         <image name="icon_send.png" width="64" height="64"/>
-        <image name="icon_share.png" width="512" height="512"/>
+        <image name="icon_share" width="128" height="128"/>
+        <image name="login_icon" width="530" height="280"/>
+        <image name="post_location" width="128" height="128"/>
+        <image name="post_picture" width="128" height="128"/>
+        <image name="post_send" width="128" height="128"/>
+        <image name="tab_home" width="64" height="64"/>
+        <image name="tab_post" width="64" height="64"/>
+        <image name="tab_profile" width="64" height="64"/>
+        <image name="tab_setting" width="64" height="64"/>
     </resources>
 </document>
