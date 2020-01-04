@@ -8,12 +8,15 @@
 
 #import <UIKit/UIKit.h>
 #import <QuartzCore/QuartzCore.h>
+#import "CommentViewController.h"
 
 @interface ViewController : UIViewController <UITextViewDelegate,UITableViewDelegate,UITableViewDataSource>
 {
     NSMutableArray *testarr;
     NSMutableArray *postArray;
     NSMutableDictionary *imageDict;
+    NSInteger *selectedIndex;
+    NSMutableDictionary *postInfo;
 }
 @property (strong, nonatomic) IBOutlet UITableView *mytableview;
 @property (strong, nonatomic) IBOutlet UITextField *textEmail;

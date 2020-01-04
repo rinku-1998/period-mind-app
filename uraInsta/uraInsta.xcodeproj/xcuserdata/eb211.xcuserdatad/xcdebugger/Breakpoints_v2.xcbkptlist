@@ -30,8 +30,8 @@
             filePath = "uraInsta/ViewController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "184"
-            endingLineNumber = "184"
+            startingLineNumber = "155"
+            endingLineNumber = "155"
             landmarkName = "-getPostCentent"
             landmarkType = "7">
          </BreakpointContent>

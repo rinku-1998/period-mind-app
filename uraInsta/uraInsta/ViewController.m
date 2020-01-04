@@ -40,37 +40,8 @@
     [_mytableview setRefreshControl:refreshControl];
     
     [self getPostCentent];
-// Do any additional setup after loading the view.
-//    int rgbValue = 0xF44336;
-//    [_button_postAndShare setBackgroundColor:[UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]];
-//    [_button_postAndShare setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-//    [_button_postAndShare.layer setCornerRadius:5.f];
-//
-//    _textView_postContent.textColor = [UIColor lightGrayColor];
-//    _textView_postContent.text = @"寫點什麼吧";
-//
-//    [_textView_postContent setDelegate:self];
 }
-//-(void)textViewDidChange:(UITextView *)textView{
-//    if(_textView_postContent.text.length == 0){
-//        _textView_postContent.textColor = [UIColor lightGrayColor];
-//        _textView_postContent.text = @"寫點什麼吧";
-//        [_textView_postContent resignFirstResponder];
-//    }
-//}
-//
-//-(BOOL)textViewShouldBeginEditing:(UITextView *)textView{
-//    _textView_postContent.text = @"";
-//    _textView_postContent.textColor = [UIColor blackColor];
-//    return YES;
-//}
-//- (void)textViewDidEndEditing:(UITextView *)textView{
-//    if(_textView_postContent.text.length == 0){
-//        _textView_postContent.textColor = [UIColor lightGrayColor];
-//        _textView_postContent.text = @"寫點什麼吧";
-//        [_textView_postContent resignFirstResponder];
-//    }
-//}
+
 //- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 //{
 //    return 1;
@@ -144,6 +115,13 @@
 //}
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    NSDictionary *post_data = [postArray objectAtIndex:indexPath.row];
+    postInfo = [[NSMutableDictionary alloc] init];
+    [postInfo setObject:[post_data objectForKey:@"postID"] forKey:@"postID"];
+    [postInfo setObject:[post_data objectForKey:@"accountName"] forKey:@"accountName"];
+    [postInfo setObject:[post_data objectForKey:@"postTime"] forKey:@"postTime"];
+    [postInfo setObject:[post_data objectForKey:@"postContent"] forKey:@"postContent"];
+    [postInfo setObject:[imageDict objectForKey:[NSString stringWithFormat:@"%ld", indexPath.row]] forKey:@"postImage"];
     [self performSegueWithIdentifier:@"gotoPostAndComment" sender:nil];
 }
 
@@ -224,5 +202,13 @@
     [postArray removeAllObjects];
     [imageDict removeAllObjects];
     [self getPostCentent];
+}
+
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if([segue.destinationViewController isKindOfClass:[CommentViewController class]]){
+        CommentViewController *commentView = (CommentViewController*)segue.destinationViewController;
+        commentView.postInfo = postInfo;
+    }
 }
 @end
