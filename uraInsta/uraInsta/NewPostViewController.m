@@ -17,7 +17,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-        int rgbValue = 0xF44336;
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(dismissKeyboard)];
+    [self.view addGestureRecognizer:tap];
     
         _textPostContent.textColor = [UIColor lightGrayColor];
         _textPostContent.text = @"寫點什麼吧";
@@ -25,6 +26,10 @@
         [_textPostContent setDelegate:self];
     [self getMyProfileInfo];
 }
+-(void)dismissKeyboard{
+    [self.textPostContent resignFirstResponder];
+}
+
 /*
 #pragma mark - Navigation
 
@@ -109,9 +114,6 @@
         UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage];
         selectedImage = image;
         self.imgPreviewImage.image = image;
-        NSLog(@"%@", self.tempPostContent);
-        self.textPostContent.text = self.tempPostContent;
-        NSLog(@"%@", self.textPostContent.text );
         [picker dismissViewControllerAnimated:YES completion:nil];
         
     }
