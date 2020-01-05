@@ -20,6 +20,7 @@
     [super viewDidLoad];
     _mytableview.delegate=self;
     _mytableview.dataSource=self;
+    
     UINib *cell_nib=[UINib nibWithNibName:@"tableHeader" bundle:nil];
     [self.mytableview registerNib:cell_nib forCellReuseIdentifier:@"newPostCell"];
     

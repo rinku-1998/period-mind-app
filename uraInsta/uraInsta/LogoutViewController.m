@@ -19,7 +19,7 @@
     // Do any additional setup after loading the view.
 }
 - (IBAction)logout:(id)sender {
-    
+    [self goLogout];
 }
 -(void)goLogout{
     NSString *url_string = @"http://127.0.0.1:5000/api/logout";
@@ -35,12 +35,16 @@
             NSString *result = [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
             NSLog(@"%@", result);
             dispatch_async(dispatch_get_main_queue(), ^{
-                
+               
             });
         }
         
     }];
     [task resume];
+}
+
+-(IBAction)unwindSegueBack2Login:(UIStoryboardSegue *)segue{
+    
 }
 /*
 #pragma mark - Navigation
