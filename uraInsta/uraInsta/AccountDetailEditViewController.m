@@ -16,11 +16,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(dismissKeyboard)];
+    [self.view addGestureRecognizer:tap];
     // Do any additional setup after loading the view.
     _textAccountEmail.text=self.accountEmail;
     _textAccountTopName.text=self.accountTopName;
     _textAccountBottomName.text=self.accountBottomName;
     _textAccountDetail.text=self.accountDetail;
+}
+
+-(void)dismissKeyboard{
+    [self.textAccountDetail resignFirstResponder];
 }
 
 - (IBAction)saveAndBack:(id)sender {
@@ -30,7 +36,8 @@
 
 -(void)getCSRFTokenAndChange{
     
-    NSString *url_string = @"http://127.0.0.1:5000/api/editProfile";
+    NSString *SERVER_URL_PREFIX = [NSString stringWithFormat:@"%@", SERVER_URL];
+    NSString *url_string = [NSString stringWithFormat:@"%@editProfile", SERVER_URL_PREFIX];
     __block NSString *csrf_token = @"";
     NSURL *url = [NSURL URLWithString:url_string];
     
@@ -65,7 +72,8 @@
     NSString *displayname = self.textAccountBottomName.text;
     NSString *email = self.textAccountEmail.text;
     NSString *profile_info = self.textAccountDetail.text;
-    NSString *url_string = @"http://127.0.0.1:5000/api/editProfile";
+    NSString *SERVER_URL_PREFIX = [NSString stringWithFormat:@"%@", SERVER_URL];
+    NSString *url_string = [NSString stringWithFormat:@"%@editProfile", SERVER_URL_PREFIX];
     NSURL *url = [NSURL URLWithString:url_string];
     
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];

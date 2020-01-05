@@ -128,7 +128,9 @@
 
 
 -(void)getPostCentent{
-    NSString *url_string = @"http://127.0.0.1:5000/api/index";
+    
+    NSString *SERVER_URL_PREFIX = [NSString stringWithFormat:@"%@", SERVER_URL];
+    NSString *url_string = [NSString stringWithFormat:@"%@index", SERVER_URL_PREFIX];
     NSURL *url = [NSURL URLWithString:url_string];
     
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
@@ -142,7 +144,7 @@
             
             
             NSArray *jsonArray = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&json_load_rror];
-            postArray = jsonArray;
+            postArray = [NSMutableArray arrayWithArray:jsonArray];
             NSLog(@"%lu", [jsonArray count]);
             NSInteger length = [jsonArray count];
             imageDict = [NSMutableDictionary new];
@@ -168,7 +170,10 @@
 
 -(void)getPostImage:(NSString *)imgName currentIndex:(NSInteger)index{
     NSLog(@"%@", imgName);
-    NSString *img_url = [NSString stringWithFormat:@"http://127.0.0.1:5000/static/images/%@", imgName];
+    
+    NSString *SERVER_URL_PREFIX = [NSString stringWithFormat:@"%@", SERVER_STATIC_URL];
+    NSString *img_url = [NSString stringWithFormat:@"%@%@", SERVER_URL_PREFIX, imgName];
+//    NSString *img_url = [NSString stringWithFormat:@"http://127.0.0.1:5000/static/images/%@", imgName];
     NSURL *url = [NSURL URLWithString:img_url];
     
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];

@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <QuartzCore/QuartzCore.h>
 #import "CommentViewController.h"
+#import "WebAPIServerSetting.h"
 
 @interface ViewController : UIViewController <UITextViewDelegate,UITableViewDelegate,UITableViewDataSource>
 {

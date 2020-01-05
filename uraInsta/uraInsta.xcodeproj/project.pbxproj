@@ -96,6 +96,7 @@
 		6896B2C723C0A2BB00DBA991 /* LogoutViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LogoutViewController.m; sourceTree = "<group>"; };
 		6896B2C923C0A4B000DBA991 /* CommentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommentViewController.h; sourceTree = "<group>"; };
 		6896B2CA23C0A4B000DBA991 /* CommentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommentViewController.m; sourceTree = "<group>"; };
+		68B0508B23C1E4CC0074508D /* WebAPIServerSetting.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebAPIServerSetting.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +158,7 @@
 				583341C923B3602900F27DD8 /* icon_picture.png */,
 				583341CA23B3602900F27DD8 /* icon_send.png */,
 				48C350EF239F3F6200091EC3 /* AppDelegate.h */,
+				68B0508B23C1E4CC0074508D /* WebAPIServerSetting.h */,
 				48C350F0239F3F6200091EC3 /* AppDelegate.m */,
 				48C350F2239F3F6200091EC3 /* ViewController.h */,
 				48C350F3239F3F6200091EC3 /* ViewController.m */,

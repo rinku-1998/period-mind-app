@@ -18,12 +18,19 @@
     [super viewDidLoad];
     [self.tableView setDelegate:self];
     [self.tableView setDataSource:self];
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(dismissKeyboard)];
+    [self.view addGestureRecognizer:tap];
     // Do any additional setup after loading the view.
     NSLog(@"postID=%@", [self.postInfo objectForKey:@"postID"]);
     [self getCommentCentent:[self.postInfo objectForKey:@"postID"]];
     self.navigationItem.backBarButtonItem.title = @"";
  
 }
+
+-(void)dismissKeyboard{
+    [self.textCommentContent resignFirstResponder];
+}
+
 - (IBAction)btn_postComment:(id)sender {
     [self getCSRFTokenAndComment];
 }
@@ -76,7 +83,10 @@
 }
 
 -(void)getCommentCentent:(NSString*)postID{
-    NSString *url_string = [NSString stringWithFormat:@"http://127.0.0.1:5000/api/getComment/%@", postID];
+    
+    NSString *SERVER_URL_PREFIX = [NSString stringWithFormat:@"%@", SERVER_URL];
+    NSString *url_string = [NSString stringWithFormat:@"%@getComment/%@", SERVER_URL_PREFIX, postID];
+//    NSString *url_string = [NSString stringWithFormat:@"http://127.0.0.1:5000/api/", postID];
     NSURL *url = [NSURL URLWithString:url_string];
     
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
@@ -101,7 +111,9 @@
 
 -(void)getCSRFTokenAndComment{
     
-    NSString *url_string = @"http://127.0.0.1:5000/api/comment";
+    NSString *SERVER_URL_PREFIX = [NSString stringWithFormat:@"%@", SERVER_URL];
+    NSString *url_string = [NSString stringWithFormat:@"%@comment", SERVER_URL_PREFIX];
+//    NSString *url_string = @"http://127.0.0.1:5000/api/comment";
     __block NSString *csrf_token = @"";
     NSURL *url = [NSURL URLWithString:url_string];
     

@@ -25,7 +25,8 @@
 
 -(void)getCSRFTokenAndRegister{
     
-    NSString *url_string = @"http://127.0.0.1:5000/api/register";
+    NSString *SERVER_URL_PREFIX = [NSString stringWithFormat:@"%@", SERVER_URL];
+    NSString *url_string = [NSString stringWithFormat:@"%@register", SERVER_URL_PREFIX];
     __block NSString *csrf_token = @"";
     NSURL *url = [NSURL URLWithString:url_string];
     
@@ -61,7 +62,9 @@
     NSString *email = self.textEmail.text;
     NSString *password = self.textPassword.text;
     NSString *password2 = self.textPassword2.text;
-    NSString *url_string = @"http://127.0.0.1:5000/api/register";
+    
+    NSString *SERVER_URL_PREFIX = [NSString stringWithFormat:@"%@", SERVER_URL];
+    NSString *url_string = [NSString stringWithFormat:@"%@register", SERVER_URL_PREFIX];
     NSURL *url = [NSURL URLWithString:url_string];
     
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];

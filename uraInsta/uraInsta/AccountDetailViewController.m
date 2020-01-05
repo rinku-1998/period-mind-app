@@ -58,7 +58,9 @@
     }
 }
 -(void)getMyProfileInfo{
-    NSString *url_string = @"http://127.0.0.1:5000/api/myprofile";
+    
+    NSString *SERVER_URL_PREFIX = [NSString stringWithFormat:@"%@", SERVER_URL];
+    NSString *url_string = [NSString stringWithFormat:@"%@myprofile", SERVER_URL_PREFIX];
     NSURL *url = [NSURL URLWithString:url_string];
     
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];

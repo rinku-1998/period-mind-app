@@ -116,7 +116,8 @@
 
 -(void)getCSRFTokenAndUpload{
     
-    NSString *url_string = @"http://127.0.0.1:5000/api/post";
+    NSString *SERVER_URL_PREFIX = [NSString stringWithFormat:@"%@", SERVER_URL];
+    NSString *url_string = [NSString stringWithFormat:@"%@post", SERVER_URL_PREFIX];
     __block NSString *csrf_token = @"";
     NSURL *url = [NSURL URLWithString:url_string];
     
@@ -148,7 +149,8 @@
 }
 -(void)sendPost:(NSString *)csrf_token{
     NSString *postContent = self.textPostContent.text;
-    NSString *url_string = @"http://127.0.0.1:5000/api/post";
+    NSString *SERVER_URL_PREFIX = [NSString stringWithFormat:@"%@", SERVER_URL];
+    NSString *url_string = [NSString stringWithFormat:@"%@post", SERVER_URL_PREFIX];
     NSURL *url = [NSURL URLWithString:url_string];
     NSString *boundary = [[NSUUID UUID] UUIDString];
     NSString *filename = [[NSUUID UUID] UUIDString];
@@ -189,6 +191,7 @@
             if ([result isEqualToString:@"ok"]){
                 dispatch_async(dispatch_get_main_queue(), ^{
                     self.textPostContent.text = @"";
+                    self.imgPreviewImage.image = nil;
                     self->selectedImage = nil;
                     
                     [self.tabBarController setSelectedIndex:0];
@@ -200,7 +203,9 @@
     
 }
 -(void)getMyProfileInfo{
-    NSString *url_string = @"http://127.0.0.1:5000/api/myprofile";
+    
+    NSString *SERVER_URL_PREFIX = [NSString stringWithFormat:@"%@", SERVER_URL];
+    NSString *url_string = [NSString stringWithFormat:@"%@myprofile", SERVER_URL_PREFIX];
     NSURL *url = [NSURL URLWithString:url_string];
     
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
