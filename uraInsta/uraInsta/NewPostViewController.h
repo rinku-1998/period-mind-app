@@ -20,7 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (strong, nonatomic) IBOutlet UILabel *labelDisplayname;
 @property (strong, nonatomic) IBOutlet UIImageView *imgAvatar;
 @property (strong, nonatomic) IBOutlet UIImageView *imgPreviewImage;
-
+@property (strong, nonatomic) NSString *tempPostContent;
 @end
 
 NS_ASSUME_NONNULL_END

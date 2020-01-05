@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Clv-kg-PUF">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Clv-kg-PUF">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -278,7 +278,7 @@
         <!--Logout View Controller-->
         <scene sceneID="Jl2-2U-Lyf">
             <objects>
-                <viewController id="DyI-dG-gtv" customClass="LogoutViewController" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="DyI-dG-gtv" customClass="LogoutViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gxy-r4-hO2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -302,6 +302,9 @@
                         <viewLayoutGuide key="safeArea" id="idl-gB-p1p"/>
                     </view>
                     <navigationItem key="navigationItem" id="4y3-Ih-SFJ"/>
+                    <connections>
+                        <segue destination="Clv-kg-PUF" kind="showDetail" identifier="go2Login" id="Iku-HR-TXH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bbM-TI-9E7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1143,7 +1146,7 @@
                                                     <constraint firstAttribute="width" secondItem="GRg-06-4l1" secondAttribute="height" multiplier="162:17" id="hRO-Xd-83e"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="new-password"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="再次輸入密碼" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FXW-TF-V7g">
                                                 <rect key="frame" x="45" y="343.33333333333331" width="324" height="34"/>
@@ -1151,7 +1154,7 @@
                                                     <constraint firstAttribute="width" secondItem="FXW-TF-V7g" secondAttribute="height" multiplier="162:17" id="tft-dT-2xy"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="new-password"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PYz-rW-FYp">
                                                 <rect key="frame" x="45" y="431.33333333333331" width="324" height="34"/>
@@ -1188,8 +1191,7 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="btn_login:" destination="hVB-sU-Sme" eventType="touchUpInside" id="1kt-an-yh6"/>
-                                                    <action selector="startRegist:" destination="GsG-P8-45z" eventType="touchUpInside" id="dtx-iQ-xPL"/>
+                                                    <action selector="startRegist:" destination="qMY-CK-0UA" eventType="touchUpInside" id="WtN-DZ-U4j"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copyright © PeriodMind. All rights reserved" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n4g-GH-4ff">
@@ -1866,10 +1868,6 @@
                                 <state key="normal" title="起飛">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
-                                <connections>
-                                    <action selector="btn_login:" destination="hVB-sU-Sme" eventType="touchUpInside" id="oWB-5n-MOd"/>
-                                    <action selector="startRegist:" destination="GsG-P8-45z" eventType="touchUpInside" id="A1c-DA-xo0"/>
-                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="密碼" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zY2-Dc-UJh">
                                 <rect key="frame" x="65" y="322" width="284" height="34"/>

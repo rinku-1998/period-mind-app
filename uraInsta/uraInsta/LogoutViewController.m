@@ -35,7 +35,7 @@
             NSString *result = [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
             NSLog(@"%@", result);
             dispatch_async(dispatch_get_main_queue(), ^{
-               
+                [self performSegueWithIdentifier:@"go2Login" sender:nil];
             });
         }
         

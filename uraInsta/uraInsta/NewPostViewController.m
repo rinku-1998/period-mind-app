@@ -25,7 +25,6 @@
         [_textPostContent setDelegate:self];
     [self getMyProfileInfo];
 }
-
 /*
 #pragma mark - Navigation
 
@@ -73,6 +72,7 @@
     [imagePicker setDelegate:self];
     [imagePicker setEditing:YES];
     [imagePicker setAllowsEditing:YES];
+    self.tempPostContent = self.textPostContent.text;
     
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"請選擇開啟方式" message:nil preferredStyle:UIAlertControllerStyleAlert];
     
@@ -108,7 +108,12 @@
     if ([mediaType isEqualToString:@"public.image"]){
         UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage];
         selectedImage = image;
+        self.imgPreviewImage.image = image;
+        NSLog(@"%@", self.tempPostContent);
+        self.textPostContent.text = self.tempPostContent;
+        NSLog(@"%@", self.textPostContent.text );
         [picker dismissViewControllerAnimated:YES completion:nil];
+        
     }
 }
 - (IBAction)postAndUpload:(id)sender {
@@ -187,10 +192,15 @@
             NSLog(@"%@", error);
         }else{
             NSLog(@"Upload success!");
-            dispatch_async(dispatch_get_main_queue(), ^{
-                self.textPostContent.text = @"";
-                selectedImage = nil;
-            });
+            NSString *result = [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
+            if ([result isEqualToString:@"ok"]){
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    self.textPostContent.text = @"";
+                    self->selectedImage = nil;
+                    
+                    [self.tabBarController setSelectedIndex:0];
+                });
+            }
         }
     }];
     [upload_task resume];
@@ -218,6 +228,7 @@
                 display_name = @"@";
                 display_name = [display_name stringByAppendingString:[jsonDict objectForKey:@"display_name"]];
                 self.labelDisplayname.text = display_name;
+                
             });
         }
         

@@ -177,10 +177,13 @@
             NSLog(@"%@", error);
         }else{
             NSLog(@"Upload success!");
-            dispatch_async(dispatch_get_main_queue(), ^{
-                self.textCommentContent.text = @"";
-                [self.navigationController popToRootViewControllerAnimated:YES];
-            });
+            NSString *result = [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
+            if([result isEqualToString:@"ok"]){
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    self.textCommentContent.text = @"";
+                    [self.navigationController popToRootViewControllerAnimated:YES];
+                });
+            }
         }
     }];
     [upload_task resume];

@@ -90,10 +90,11 @@
         }else{
             NSString *result = [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
             NSLog(@"%@", result);
-//            if([result isEqualToString:@"changed"]){
-//
-//
-//            }
+            if([result isEqualToString:@"ok"]){
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [self.navigationController popToRootViewControllerAnimated:YES];
+                });
+            }
         }
     }];
     [task resume];
