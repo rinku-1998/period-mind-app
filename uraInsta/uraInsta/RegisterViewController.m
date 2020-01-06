@@ -9,6 +9,10 @@
 #import "RegisterViewController.h"
 
 @interface RegisterViewController ()
+{
+    UITextField *activeField;
+    CGPoint lastOffset;
+}
 
 @end
 
@@ -19,6 +23,59 @@
     // Do any additional setup after loading the view.
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(dismissKeyboard)];
     [self.view addGestureRecognizer:tap];
+    
+    [self.textEmail setDelegate:self];
+    [self.textPassword setDelegate:self];
+    [self.textPassword2 setDelegate:self];
+    [self.textAccountName setDelegate:self];
+    [self.textDisplayname setDelegate:self];
+}
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
+}
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    [[NSNotificationCenter defaultCenter]removeObserver:self name:UIKeyboardWillShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter]removeObserver:self name:UIKeyboardWillHideNotification object:nil];
+}
+-(void)keyboardWillShow:(NSNotification *)aNotification
+{
+    NSDictionary* info = [aNotification userInfo];
+    CGSize kbSize = [[info objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
+
+    UIEdgeInsets contentInsets = UIEdgeInsetsMake(0.0, 0.0, kbSize.height, 0.0);
+    _scrollview.contentInset = contentInsets;
+    _scrollview.scrollIndicatorInsets = contentInsets;
+
+    // If active text field is hidden by keyboard, scroll it so it's visible
+    // Your app might not need or want this behavior.
+    CGRect aRect = self.view.frame;
+    aRect.size.height -= kbSize.height;
+    if (!CGRectContainsPoint(aRect, activeField.frame.origin) ) {
+        [self.scrollview scrollRectToVisible:activeField.frame animated:YES];
+    }
+}
+-(void)keyboardWillHide:(NSNotification *)aNotification
+{
+    UIEdgeInsets contentInsets = UIEdgeInsetsZero;
+    _scrollview.contentInset = contentInsets;
+    _scrollview.scrollIndicatorInsets = contentInsets;
+}
+- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField
+{
+    activeField = textField;
+//    lastOffset = CGPointMake(self.scrollview.contentOffset.x, self.scrollview.contentOffset.y);
+    return  true;
+}
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+//    [activeField resignFirstResponder];
+    activeField=nil;
+    return true;
 }
 
 -(void)dismissKeyboard{

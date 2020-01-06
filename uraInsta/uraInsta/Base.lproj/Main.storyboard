@@ -1250,6 +1250,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="I2a-zp-4yc"/>
                     <connections>
+                        <outlet property="scrollview" destination="u8n-Gy-K5e" id="pTj-XN-OUW"/>
                         <outlet property="textAccountName" destination="ZeA-eV-grM" id="LnM-hk-BdJ"/>
                         <outlet property="textDisplayname" destination="6vg-VE-EzC" id="TNg-lC-OE4"/>
                         <outlet property="textEmail" destination="PYz-rW-FYp" id="X41-RS-dVf"/>
