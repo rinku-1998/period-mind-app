@@ -18,6 +18,9 @@
     NSMutableDictionary *imageDict;
     NSInteger *selectedIndex;
     NSMutableDictionary *postInfo;
+    NSNumber *postLength;
+    NSNumber *loadLength;
+    bool refresh;
 }
 @property (strong, nonatomic) IBOutlet UITableView *mytableview;
 @property (strong, nonatomic) IBOutlet UITextField *textEmail;

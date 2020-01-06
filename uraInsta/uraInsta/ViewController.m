@@ -18,6 +18,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    refresh = false;
     _mytableview.delegate=self;
     _mytableview.dataSource=self;
     
@@ -116,18 +117,23 @@
 //}
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSDictionary *post_data = [postArray objectAtIndex:indexPath.row];
-    postInfo = [[NSMutableDictionary alloc] init];
-    [postInfo setObject:[post_data objectForKey:@"postID"] forKey:@"postID"];
-    [postInfo setObject:[post_data objectForKey:@"accountName"] forKey:@"accountName"];
-    [postInfo setObject:[post_data objectForKey:@"postTime"] forKey:@"postTime"];
-    [postInfo setObject:[post_data objectForKey:@"postContent"] forKey:@"postContent"];
-    [postInfo setObject:[imageDict objectForKey:[NSString stringWithFormat:@"%ld", indexPath.row]] forKey:@"postImage"];
-    [self performSegueWithIdentifier:@"gotoPostAndComment" sender:nil];
+    if(!refresh){
+        NSDictionary *post_data = [postArray objectAtIndex:indexPath.row];
+        postInfo = [[NSMutableDictionary alloc] init];
+        [postInfo setObject:[post_data objectForKey:@"postID"] forKey:@"postID"];
+        [postInfo setObject:[post_data objectForKey:@"accountName"] forKey:@"accountName"];
+        [postInfo setObject:[post_data objectForKey:@"postTime"] forKey:@"postTime"];
+        [postInfo setObject:[post_data objectForKey:@"postContent"] forKey:@"postContent"];
+        [postInfo setObject:[imageDict objectForKey:[NSString stringWithFormat:@"%ld", indexPath.row]] forKey:@"postImage"];
+        
+        [self performSegueWithIdentifier:@"gotoPostAndComment" sender:nil];
+    }
+    
 }
 
 
 -(void)getPostCentent{
+    loadLength = [NSNumber numberWithInt:0];
     
     NSString *SERVER_URL_PREFIX = [NSString stringWithFormat:@"%@", SERVER_URL];
     NSString *url_string = [NSString stringWithFormat:@"%@index", SERVER_URL_PREFIX];
@@ -147,15 +153,20 @@
             postArray = [NSMutableArray arrayWithArray:jsonArray];
             NSLog(@"%lu", [jsonArray count]);
             NSInteger length = [jsonArray count];
+            postLength = @(length);
             imageDict = [NSMutableDictionary new];
             for(int i=0;i<length;i++){
                 NSLog(@"%d========%@",i,[jsonArray[i] objectForKey:@"postImage"]);
                 if ([[jsonArray[i] objectForKey:@"postImage"] isEqual:[NSNull null]]) {
+                    int value = [self->postLength intValue];
+                    self->postLength = [NSNumber numberWithInt:value-1];
                     NSLog(@"空的");
                 }
                 else
                 {
                     [self getPostImage: [jsonArray[i] objectForKey:@"postImage"] currentIndex:i];
+                    NSLog(@"%d", i);
+                    
                 }
             }
             
@@ -186,11 +197,21 @@
             if(data){
                 UIImage *image = [[UIImage alloc]initWithData:data];
 //                UIImage *image = [UIImage imageWithData:data];
+                
                 if (image!=nil) {
                     [self->imageDict setObject:image forKey:[NSString stringWithFormat:@"%ld", index]];
+                    
+                    
                     dispatch_async(dispatch_get_main_queue(), ^{
-                        [self->_mytableview reloadData];
-                        [refreshControl endRefreshing];
+//                        NSLog(@"%")
+                        int value = [self->loadLength intValue];
+                        self->loadLength = [NSNumber numberWithInt:value+1];
+                        if([self->loadLength intValue] == [self->postLength intValue]){
+                            [self->_mytableview reloadData];
+                            [refreshControl endRefreshing];
+                            self->refresh = false;
+                        }
+                        
                     });
                 }
                 
@@ -205,9 +226,13 @@
 }
 -(void)pullToRefresh
 {
-    [postArray removeAllObjects];
-    [imageDict removeAllObjects];
-    [self getPostCentent];
+    if (!refresh){
+        refresh = true;
+//        [postArray removeAllObjects];
+//        [imageDict removeAllObjects];
+        [self getPostCentent];
+    }
+    
 }
 
 
