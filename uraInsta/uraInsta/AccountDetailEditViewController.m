@@ -27,6 +27,9 @@
 
 -(void)dismissKeyboard{
     [self.textAccountDetail resignFirstResponder];
+    [self.textAccountEmail resignFirstResponder];
+    [self.textAccountTopName resignFirstResponder];
+    [self.textAccountBottomName resignFirstResponder];
 }
 
 - (IBAction)saveAndBack:(id)sender {

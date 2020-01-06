@@ -145,7 +145,9 @@
 }
 -(void)sendComment:(NSString *)csrf_token{
     NSString *commentContent = self.textCommentContent.text;
-    NSString *url_string = @"http://127.0.0.1:5000/api/comment";
+    NSString *SERVER_URL_PREFIX = [NSString stringWithFormat:@"%@", SERVER_URL];
+    NSString *url_string = [NSString stringWithFormat:@"%@comment", SERVER_URL_PREFIX];
+//    NSString *url_string = @"http://127.0.0.1:5000/api/comment";
     NSURL *url = [NSURL URLWithString:url_string];
     NSString *boundary = [[NSUUID UUID] UUIDString];
     NSString *headerString = [NSString stringWithFormat:@"multipart/form-data; boundary=%@", boundary];

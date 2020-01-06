@@ -342,7 +342,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MHh-wR-frc">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="327.66666666666669"/>
                                         <subviews>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" text="TA什麼也沒留下T_T" translatesAutoresizingMaskIntoConstraints="NO" id="0wv-8G-DX8">
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="TA什麼也沒留下T_T" translatesAutoresizingMaskIntoConstraints="NO" id="0wv-8G-DX8">
                                                 <rect key="frame" x="20" y="95" width="374" height="100"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
@@ -712,8 +712,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="l6c-jB-Y7W">
-                                <rect key="frame" x="0.0" y="44" width="414" height="594"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="l6c-jB-Y7W">
+                                <rect key="frame" x="0.0" y="44" width="414" height="643"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="postContentCell" id="KJA-CU-1jR">
@@ -752,7 +752,7 @@
                                                         <constraint firstAttribute="width" constant="35" id="sdg-mu-GDD"/>
                                                     </constraints>
                                                 </imageView>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="123" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="YqX-sp-Hmk">
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="4" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="123" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="YqX-sp-Hmk">
                                                     <rect key="frame" x="16" y="344" width="378" height="33.333333333333314"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -1164,7 +1164,7 @@
                                                     <constraint firstAttribute="width" secondItem="PYz-rW-FYp" secondAttribute="height" multiplier="162:17" id="rAf-4w-A3d"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                <textInputTraits key="textInputTraits" textContentType="email"/>
+                                                <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="你的名字" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZeA-eV-grM">
                                                 <rect key="frame" x="45" y="255.33333333333331" width="324" height="34"/>
@@ -1254,6 +1254,13 @@
                         <viewLayoutGuide key="safeArea" id="l7O-Ae-DNV"/>
                     </view>
                     <navigationItem key="navigationItem" id="I2a-zp-4yc"/>
+                    <connections>
+                        <outlet property="textAccountName" destination="ZeA-eV-grM" id="LnM-hk-BdJ"/>
+                        <outlet property="textDisplayname" destination="6vg-VE-EzC" id="TNg-lC-OE4"/>
+                        <outlet property="textEmail" destination="PYz-rW-FYp" id="X41-RS-dVf"/>
+                        <outlet property="textPassword" destination="GRg-06-4l1" id="u4h-bk-jbB"/>
+                        <outlet property="textPassword2" destination="FXW-TF-V7g" id="Gn0-Kh-rKR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nG6-oE-yxf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1918,7 +1925,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="yEW-4x-cE2"/>
                     <connections>
-                        <outlet property="textAccountName" destination="7ES-FC-fty" id="EdR-bE-sGE"/>
                         <outlet property="textDisplayname" destination="9Y0-m4-Xeg" id="XZ0-Qc-LAg"/>
                         <outlet property="textEmail" destination="Dwq-pi-aIm" id="YCd-QX-KWr"/>
                         <outlet property="textPassword" destination="zY2-Dc-UJh" id="H28-xb-WVN"/>
