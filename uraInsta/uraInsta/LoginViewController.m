@@ -22,7 +22,14 @@
     // Do any additional setup after loading the view.
     [self.textEmail setDelegate:self];
     [self.textPassword setDelegate:self];
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(dismissKeyboard)];
+    [self.view addGestureRecognizer:tap];
     
+}
+
+-(void)dismissKeyboard{
+    [self.textEmail resignFirstResponder];
+    [self.textPassword resignFirstResponder];
 }
 - (void)viewWillAppear:(BOOL)animated
 {
