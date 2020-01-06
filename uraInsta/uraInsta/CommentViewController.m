@@ -9,7 +9,10 @@
 #import "CommentViewController.h"
 
 @interface CommentViewController ()
-
+{
+    UITextField *activeField;
+    CGRect screensize;
+}
 @end
 
 @implementation CommentViewController
@@ -24,8 +27,79 @@
     NSLog(@"postID=%@", [self.postInfo objectForKey:@"postID"]);
     [self getCommentCentent:[self.postInfo objectForKey:@"postID"]];
     self.navigationItem.backBarButtonItem.title = @"";
+    [self.textCommentContent setDelegate:self];
  
 }
+//-(void)textViewDidBeginEditing:(UITextView *)textView
+//{
+//    [UIView beginAnimations:nil context:nil];
+//    [UIView setAnimationDuration:0.3];
+//    self.view.frame = CGRectMake(self.view.frame.origin.x, -200, self.view.frame.size.width, self.view.frame.size.height);
+//    [UIView commitAnimations];
+//}
+//-(BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text
+//{
+//    if ([text isEqualToString:@"\n"])
+//    {
+//        [textView resignFirstResponder];
+//        [UIView beginAnimations:nil context:NULL];
+//        [UIView setAnimationDuration:0.3];
+//
+//        self.view.frame = CGRectMake(self.view.frame.origin.x, 0, self.view.frame.size.width, self.view.frame.size.height);
+//        [UIView commitAnimations];
+//        return NO;
+//    }
+//    return YES;
+//}
+//- (void)textViewDidEndEditing:(UITextView *)textView
+//{
+//    [textView resignFirstResponder];
+//    [UIView beginAnimations:nil context:NULL];
+//    [UIView setAnimationDuration:0.3];
+//
+//    self.view.frame = CGRectMake(self.view.frame.origin.x, 0, self.view.frame.size.width, self.view.frame.size.height);
+//    [UIView commitAnimations];
+//}
+
+
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
+}
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    [[NSNotificationCenter defaultCenter]removeObserver:self name:UIKeyboardWillShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter]removeObserver:self name:UIKeyboardWillHideNotification object:nil];
+}
+-(void)keyboardWillShow:(NSNotification *)aNotification
+{
+    NSDictionary* info = [aNotification userInfo];
+    CGSize kbSize = [[info objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
+    
+    NSLog(@"kbsize height:%f",kbSize.height);
+
+    [UIView beginAnimations:nil context:nil];
+    [UIView setAnimationDuration:0.3];
+    self.view.frame = CGRectMake(self.view.frame.origin.x, 0-kbSize.height, self.view.frame.size.width, self.view.frame.size.height);
+    [UIView commitAnimations];
+}
+-(void)keyboardWillHide:(NSNotification *)aNotification
+{
+    [_textCommentContent resignFirstResponder];
+    [UIView beginAnimations:nil context:NULL];
+    [UIView setAnimationDuration:0.3];
+
+    self.view.frame = CGRectMake(self.view.frame.origin.x, 0, self.view.frame.size.width, self.view.frame.size.height);
+    [UIView commitAnimations];
+}
+
+
+
+
 
 -(void)dismissKeyboard{
     [self.textCommentContent resignFirstResponder];

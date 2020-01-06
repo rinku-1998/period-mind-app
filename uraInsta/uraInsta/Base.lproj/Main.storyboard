@@ -913,6 +913,10 @@
                             </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <accessibility key="accessibilityConfiguration">
+                            <accessibilityTraits key="traits" keyboardKey="YES" notEnabled="YES"/>
+                            <bool key="isElement" value="NO"/>
+                        </accessibility>
                         <constraints>
                             <constraint firstItem="l6c-jB-Y7W" firstAttribute="leading" secondItem="Hfq-1G-sft" secondAttribute="leading" id="2cv-gp-6Pp"/>
                             <constraint firstItem="Hfq-1G-sft" firstAttribute="top" secondItem="l6c-jB-Y7W" secondAttribute="top" id="V43-Eo-x2W"/>
@@ -1065,6 +1069,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="wgA-UZ-sod"/>
                     <connections>
+                        <outlet property="scrollview" destination="xzP-bC-nMi" id="fr9-bM-tZo"/>
                         <outlet property="textEmail" destination="i3C-9w-7Bx" id="FKc-fG-A0r"/>
                         <outlet property="textPassword" destination="gEK-Jy-NBv" id="N0P-ze-D9d"/>
                         <segue destination="OmB-Wh-wiu" kind="showDetail" identifier="gotoindex" id="Liq-kU-3eo"/>
@@ -1395,6 +1400,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="scrollview" destination="MpT-Nf-aPS" id="BOQ-ks-j5d"/>
                         <outlet property="textAccountBottomName" destination="8Tj-QD-jGt" id="CGB-jj-inx"/>
                         <outlet property="textAccountDetail" destination="9p7-Oe-5Wk" id="Act-Mr-Kv3"/>
                         <outlet property="textAccountEmail" destination="ElA-cg-3fu" id="bka-UT-Dlw"/>

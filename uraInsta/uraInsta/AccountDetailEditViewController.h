@@ -11,7 +11,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface AccountDetailEditViewController : UIViewController
+@interface AccountDetailEditViewController : UIViewController<UITextFieldDelegate>
 @property (strong, nonatomic) IBOutlet UITextField *textAccountTopName;
 @property (strong, nonatomic) IBOutlet UITextView *textAccountDetail;
 @property (strong, nonatomic) IBOutlet UITextField *textAccountEmail;
@@ -20,6 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,copy) NSString *accountBottomName;
 @property (nonatomic,copy) NSString *accountTopName;
 @property (nonatomic,copy) NSString *accountDetail;
+@property (strong, nonatomic) IBOutlet UIScrollView *scrollview;
 
 @end
 

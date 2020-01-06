@@ -11,7 +11,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface CommentViewController : UIViewController <UITableViewDelegate,UITableViewDataSource>{
+@interface CommentViewController : UIViewController <UITableViewDelegate,UITableViewDataSource,UITextViewDelegate>{
     NSMutableArray *commentArray;
     
 }
